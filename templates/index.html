@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block title %}Home - EODB Platform{% endblock %}
+
+{% block content %}
+    <section class="hero-section">
+        <h2>Your One-Stop Platform for Startup Approvals & Schemes</h2>
+        <p>Simplify your journey from idea to enterprise with AI-powered guidance and real-time tracking.</p>
+        <button id="launchChatbotBtn" class="btn">Launch AI Assistant</button>
+    </section>
+
+    <section class="chatbot-section" style="display: none;">
+        <h3>AI Assistant</h3>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-message bot-message">Hello! I'm your EODB AI assistant. How can I help you today?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Ask me about approvals, schemes, or your startup domain...">
+            <button id="sendBtn" class="btn">Send</button>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <h3>Key Features</h3>
+        <div class="feature-cards">
+            <div class="card">
+                <h4>Step-by-Step Guidance</h4>
+                <p>Clear, actionable steps for every approval process.</p>
+            </div>
+            <div class="card">
+                <h4>Real-time Tracking</h4>
+                <p>Monitor your application status effortlessly.</p>
+            </div>
+            <div class="card">
+                <h4>Scheme Recommendations</h4>
+                <p>Discover relevant government schemes and subsidies.</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const launchChatbotBtn = document.getElementById('launchChatbotBtn');
+        const chatbotSection = document.querySelector('.chatbot-section');
+        const chatWindow = document.getElementById('chatWindow');
+        const userInput = document.getElementById('userInput');
+        const sendBtn = document.getElementById('sendBtn');
+
+        // Event listener to launch chatbot
+        launchChatbotBtn.addEventListener('click', () => {
+            chatbotSection.style.display = 'block'; // Make chatbot visible
+            launchChatbotBtn.style.display = 'none'; // Hide the launch button
+            userInput.focus(); // Focus on the input field
+        });
+
+        // Event listeners for sending messages
+        sendBtn.addEventListener('click', sendMessage);
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        function sendMessage() {
+            const message = userInput.value.trim(); // Get user input and remove whitespace
+            if (message === '') return; // Don't send empty messages
+
+            // Display user's message in the chat window
+            const userMessageDiv = document.createElement('div');
+            userMessageDiv.classList.add('chat-message', 'user-message');
+            userMessageDiv.textContent = message;
+            chatWindow.appendChild(userMessageDiv);
+
+            // Scroll chat window to the bottom to show the latest message
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+
+            userInput.value = ''; // Clear the input field
+
+            // Send message to Flask backend using Fetch API
+            fetch('/ask_chatbot', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json' // Tell Flask we're sending JSON
+                },
+                body: JSON.stringify({ message: message }) // Convert message to JSON string
+            })
+            .then(response => response.json()) // Parse the JSON response from Flask
+            .then(data => {
+                // Create a div for bot's message
+                const botMessageDiv = document.createElement('div');
+                botMessageDiv.classList.add('chat-message', 'bot-message');
+
+                // Correctly replace **bold** markdown with <strong> HTML
+                let botResponseHtml = data.response.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                // Correctly replace newline characters (\n) with HTML <br> tags
+                botMessageDiv.innerHTML = botResponseHtml.replace(/\n/g, '<br>');
+
+                chatWindow.appendChild(botMessageDiv); // Add bot's message to chat window
+
+                // If recommended approvals are in the response, display them
+                if (data.recommended_approvals && data.recommended_approvals.length > 0) {
+                    const approvalsListDiv = document.createElement('div');
+                    approvalsListDiv.classList.add('chat-message', 'bot-message', 'recommendation');
+                    
+                    // Build HTML for the list of recommendations
+                    let ulContent = '<strong>Recommended for you:</strong><ul>';
+                    data.recommended_approvals.forEach(app => {
+                        ulContent += `<li><a href="${app.portal_link || '#'}" target="_blank">${app.name}</a></li>`;
+                    });
+                    ulContent += '</ul>';
+                    approvalsListDiv.innerHTML = ulContent;
+                    
+                    chatWindow.appendChild(approvalsListDiv); // Add recommendations to chat window
+                }
+
+                // Scroll chat window to the bottom again
+                chatWindow.scrollTop = chatWindow.scrollHeight;
+            })
+            .catch(error => {
+                // Handle any errors during the fetch request
+                console.error('Error:', error);
+                const errorDiv = document.createElement('div');
+                errorDiv.classList.add('chat-message', 'bot-message', 'error-message');
+                errorDiv.textContent = 'Sorry, something went wrong. Please try again.';
+                chatWindow.appendChild(errorDiv);
+                chatWindow.scrollTop = chatWindow.scrollHeight;
+            });
+        }
+    });
+</script>
+{% endblock %}

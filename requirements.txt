@@ -1,2 +1,8 @@
 Flask
+<<<<<<< HEAD
 pymongo
+=======
+firebase-admin
+requests
+beautifulsoup4
+>>>>>>> e1a9470 (Local changes before pulling)

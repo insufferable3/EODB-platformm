@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page_title | default('All Government Schemes') }} - EODB{% endblock %}
+
+{% block content %}
+<div class="page-container">
+    <h2 class="page-title">{{ page_title | default('📚 All Government Schemes') }}</h2>
+
+    {% if schemes %}
+    <div class="schemes-grid">
+        {% for scheme in schemes %}
+        <div class="scheme-card">
+            {# Use "Scheme" for the title. Default to 'No Title' if missing or None. #}
+            <h3>{{ scheme.Scheme | default('No Title') }}</h3>
+
+            {# Use "Key Sector Covered" for the sector. Check if it exists and is not empty. #}
+            {# The 'default("")' ensures it's always a string before comparison. #}
+            {% if (scheme["Key Sector Covered"] | default("")) != "" %}
+            <p class="scheme-sector">Sector: {{ scheme["Key Sector Covered"] }}</p>
+            {% endif %}
+
+            {# Use "Brief" for the description. Default to 'No description available.' if missing or None. #}
+            {# Truncate to 150 characters. #}
+            <p class="scheme-description">{{ scheme.Brief | default('No description available.') | truncate(150, True) }}</p>
+
+            {# Use "Link to Application" for the link. Ensure it's a string for href. #}
+            {# The 'default("")' filter is crucial here to prevent NoneType for href. #}
+            {% if scheme["Link to Application"] %}
+            <a href="{{ scheme['Link to Application'] | default('') }}" target="_blank" class="scheme-link">Learn More</a>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p class="no-schemes-message">No schemes found or no recommendations available based on your selection.</p>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block styles %}
+{{ super() }} {# IMPORTANT: This line includes styles from the base template #}
+<style>
+    /* --- General Page Layout --- */
+    .page-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+        min-height: 100vh;
+        box-sizing: border-box;
+        background-color: #f0f2f5;
+    }
+
+    .page-title {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+        font-size: 2.2em;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+    }
+
+    /* --- Schemes Grid and Card Styles --- */
+    .schemes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust card width as needed */
+        gap: 25px;
+        width: 100%;
+        max-width: 1000px; /* Max width for the grid */
+        margin-top: 30px;
+        padding: 0 20px; /* Padding for the grid within the container */
+        box-sizing: border-box;
+    }
+
+    .scheme-card {
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Pushes link to bottom */
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        min-height: 220px; /* Consistent height for cards */
+    }
+
+    .scheme-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .scheme-card h3 {
+        color: #333;
+        font-size: 1.4em;
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-weight: 600;
+        line-height: 1.3;
+    }
+
+    .scheme-card .scheme-sector {
+        color: #007BFF;
+        font-size: 0.9em;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .scheme-card .scheme-description {
+        color: #666;
+        font-size: 0.95em;
+        line-height: 1.5;
+        flex-grow: 1; /* Allows description to take up available space */
+        margin-bottom: 15px;
+    }
+
+    .scheme-card .scheme-link {
+        display: inline-block;
+        margin-top: auto; /* Pushes link to the bottom */
+        padding: 10px 18px;
+        background-color: #28a745;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: background-color 0.2s ease;
+        align-self: flex-start;
+    }
+
+    .scheme-card .scheme-link:hover {
+        background-color: #218838;
+    }
+
+    .no-schemes-message {
+        text-align: center;
+        color: #777;
+        font-size: 1.2em;
+        margin-top: 50px;
+    }
+
+    /* --- Media Queries --- */
+    @media (max-width: 768px) {
+        .schemes-grid {
+            grid-template-columns: 1fr;
+            padding: 0 15px;
+        }
+        .scheme-card {
+            padding: 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .schemes-grid {
+            gap: 15px;
+        }
+        .scheme-card h3 {
+            font-size: 1.2em;
+        }
+        .scheme-card .scheme-link {
+            padding: 8px 15px;
+            font-size: 0.9em;
+        }
+    }
+</style>
+{% endblock %}

@@ -175,6 +175,11 @@ def recommend_schemes():
 
     return render_template("scheme_results.html", results=matches)
 
+@app.route('/schemes')
+def show_all_schemes():
+    return render_template('all_schemes.html', schemes=all_schemes, page_title="All Government Schemes")
+
+
 
 
 

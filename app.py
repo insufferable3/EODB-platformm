@@ -1,9 +1,23 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, redirect, url_for, session, flash, jsonify
+
+from werkzeug.security import generate_password_hash, check_password_hash
+import re
 
 app = Flask(__name__)
+app.secret_key = "your_secret_key"
+from pymongo import MongoClient
 
-# Dummy data for approvals (normally this would come from a database or external JSON)
-# Abhi ke liye ye simple Python dictionary use kar rahe hain.
+client = MongoClient("mongodb+srv://angelgupta:qPkI1uUzKeZern12@eodbplatform.vllgoss.mongodb.net/")
+
+db = client["eodb_users"]  # your custom DB name
+users_collection = db["users"]  # Add this line
+
+
+
+
+
+
+# Dummy data for approvals
 approvals_data = {
     "company_registration": {
         "name": "Company Registration",
@@ -45,10 +59,8 @@ approvals_data = {
         "portal_link": "https://udyamregistration.gov.in/",
         "domain_tags": ["general", "all_startups", "subsidies", "schemes"],
         "estimated_time": "1-2 days (online)"
-    },
-    # Add more approvals as needed for your prototype
+    }
 }
-
 
 @app.route('/')
 def home():
@@ -63,72 +75,145 @@ def ask_chatbot():
 
     if "hello" in user_message or "hi" in user_message:
         response_text = "Hello! I'm your EODB AI assistant. How can I help you with your startup's approvals or government schemes today? You can ask me about 'company registration', 'GST', or 'MSME registration'."
+
     elif "company registration" in user_message or "company" in user_message or "register my business" in user_message:
         approval = approvals_data.get("company_registration")
         if approval:
-            # FIXED: Changed to triple-quoted f-string for multi-line content
-            response_text = f"""For **{approval['name']}**: {approval['description']}
+            steps_list = '\n- '.join(approval['steps'])
+            response_text = f"""For *{approval['name']}*: {approval['description']}
 
-**Steps:**
-- {'\n- '.join(approval['steps'])}
+*Steps:*
+- {steps_list}
 
-**Estimated Time:** {approval['estimated_time']}
+*Estimated Time:* {approval['estimated_time']}
 You can find more details and apply here: {approval['portal_link']}
 
 Is there anything else I can help you with regarding company setup?"""
+
     elif "gst" in user_message or "gst registration" in user_message:
         approval = approvals_data.get("gst_registration")
         if approval:
-            # FIXED: Changed to triple-quoted f-string for multi-line content
-            response_text = f"""Regarding **{approval['name']}**: {approval['description']}
+            steps_list = '\n- '.join(approval['steps'])
+            response_text = f"""Regarding *{approval['name']}*: {approval['description']}
 
-**Steps:**
-- {'\n- '.join(approval['steps'])}
+*Steps:*
+- {steps_list}
 
-**Estimated Time:** {approval['estimated_time']}
+*Estimated Time:* {approval['estimated_time']}
 Apply online here: {approval['portal_link']}
 
 Do you need help with other tax registrations?"""
+
     elif "msme" in user_message or "udyam" in user_message or "msme registration" in user_message or "subsidies" in user_message or "schemes" in user_message:
         approval = approvals_data.get("msme_udyog_aadhaar")
         if approval:
-            # FIXED: Changed to triple-quoted f-string for multi-line content
-            response_text = f"""For **{approval['name']}**: {approval['description']}
+            steps_list = '\n- '.join(approval['steps'])
+            response_text = f"""For *{approval['name']}*: {approval['description']}
 
-**Steps:**
-- {'\n- '.join(approval['steps'])}
+*Steps:*
+- {steps_list}
 
-**Estimated Time:** {approval['estimated_time']}
+*Estimated Time:* {approval['estimated_time']}
 You can register here: {approval['portal_link']}
 
 This registration can help you access various government schemes and subsidies."""
+
     elif "domain" in user_message and "startup" in user_message:
         response_text = "What is your startup's domain or industry (e.g., 'FinTech', 'FoodTech', 'E-commerce')? I can provide more specific guidance."
+
     elif "fintech" in user_message:
         response_text = "For a FinTech startup, beyond general registrations, you'll need specific licenses from RBI, SEBI, or IRDAI depending on your services. I recommend looking into: RBI Payment Bank License, NBFC Registration, or SEBI Investment Advisor Registration. You should also ensure compliance with FEMA and Data Protection laws."
         recommended_approvals = [
             approvals_data.get("company_registration"),
             approvals_data.get("gst_registration")
         ]
+
     elif "foodtech" in user_message:
         response_text = "If your startup is in FoodTech, you absolutely need an FSSAI Food License. Depending on your operations (manufacturing, distribution, restaurant), the type of license may vary. Also consider: BIS Certification for certain food products."
         recommended_approvals = [
             approvals_data.get("company_registration"),
             approvals_data.get("gst_registration"),
-            {"name": "FSSAI Food License", "portal_link": "https://foodlicensing.fssai.gov.in/"} # Dummy for now if not in approvals_data
+            {"name": "FSSAI Food License", "portal_link": "https://foodlicensing.fssai.gov.in/"}
         ]
-    
-    # Filter out None values from recommended_approvals if some keys not found
-    recommended_approvals = [app for app in recommended_approvals if app]
 
+    recommended_approvals = [app for app in recommended_approvals if app]
 
     return jsonify({
         'response': response_text,
         'recommended_approvals': recommended_approvals,
-        'schemes_info': schemes_info # Currently empty, but can be filled by an ML model later
+        'schemes_info': schemes_info
     })
 
 if __name__ == '__main__':
-    # Debug mode TRUE rakhna development ke liye, production mein FALSE
-    # Agar Port 5000 busy ho, toh port=8000 ya koi aur free port use karna
-    app.run(debug=True, host='0.0.0.0', port=5001)
+    app.run(debug=True, host='127.0.0.1', port=5000)
+
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        email = request.form.get('email')
+        password = request.form.get('password')
+
+        user = users_collection.find_one({"email": email})
+        if user:
+            if check_password_hash(user['password'], password):
+                session['email'] = user['email']
+                return redirect('/')
+            else:
+                flash("Incorrect password.")
+        else:
+            flash("Email not found. Please sign up.")
+    return render_template('login.html')
+
+
+@app.route('/signup', methods=['POST'])
+def signup():
+    email = request.form.get('email')
+    password = request.form.get('password')
+    confirm = request.form.get('confirm')
+    fname = request.form.get('fname')
+    lname = request.form.get('lname')
+    mname = request.form.get('mname')
+    age = int(request.form.get('age'))
+
+    # Validation
+    if age < 18:
+        flash("You must be 18+ to register.")
+        return redirect('/login')
+
+    if password != confirm:
+        flash("Passwords do not match.")
+        return redirect('/login')
+
+    if not re.match(r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$', password):
+        flash("Password must contain uppercase, lowercase, number, and special character.")
+        return redirect('/login')
+
+    if users_collection.find_one({"email": email}):
+        flash("Account already exists.")
+        return redirect('/login')
+
+    users_collection.insert_one({
+        "email": email,
+        "password": generate_password_hash(password),
+        "fname": fname,
+        "lname": lname,
+        "mname": mname,
+        "age": age
+    })
+    session['email'] = email
+    return redirect('/')
+
+@app.route('/dashboard')
+def dashboard():
+    if 'user' not in session:
+        return redirect(url_for('login'))
+    return render_template('dashboard.html', user=session['user'])
+
+
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('login'))
+

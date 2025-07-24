@@ -149,6 +149,32 @@ This registration can help you access various government schemes and subsidies."
         'schemes_info': schemes_info
     })
 
+@app.route('/find_schemes', methods=['GET'])
+def find_schemes():
+    return render_template("scheme_form.html")
+
+
+@app.route('/recommend_schemes', methods=['POST'])
+def recommend_schemes():
+    idea = request.form.get('startup_idea', '').lower()
+    selected_sectors = request.form.getlist('sectors')
+
+    matches = []
+    for scheme in all_schemes:
+        score = 0
+        text_blob = f"{scheme.get('Brief', '')} {scheme.get('Eligibility Criteria', '')} {scheme.get('Key Sector Covered', '')}".lower()
+
+        if idea and any(word in text_blob for word in idea.split()):
+            score += 1
+
+        if selected_sectors and any(sector.lower() in text_blob for sector in selected_sectors):
+            score += 1
+
+        if score > 0:
+            matches.append(scheme)
+
+    return render_template("scheme_results.html", results=matches)
+
 
 
 

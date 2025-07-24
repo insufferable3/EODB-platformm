@@ -145,6 +145,7 @@ This registration can help you access various government schemes and subsidies."
     })
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     app.run(debug=True, host='127.0.0.1', port=5000)
 
 
@@ -217,3 +218,8 @@ def logout():
     session.clear()
     return redirect(url_for('login'))
 
+=======
+    # Debug mode TRUE rakhna development ke liye, production mein FALSE
+    # Agar Port 5000 busy ho, toh port=8000 ya koi aur free port use karna
+   app.run(debug=True, host='127.0.0.1', port=5000)
+>>>>>>> 5a7a4ef (the changes made to app.py)

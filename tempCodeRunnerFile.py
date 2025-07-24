@@ -248,8 +248,5 @@ def logout():
     # Agar Port 5000 busy ho, toh port=8000 ya koi aur free port use karna
     app.run(debug=True, host='127.0.0.1', port=5001)
 
-
-
-
 if __name__ == '__main__':
-    app.run(debug=True, host='127.0.0.1', port=5002)
+    app.run(debug=True, host='127.0.0.1', port=5001)

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Recommended Schemes - EODB{% endblock %}
+
+{% block content %}
+<h2>Recommended Government Schemes</h2>
+
+{% if results %}
+<div class="scheme-grid">
+    {% for scheme in results %}
+    <div class="scheme-card">
+        <h3>{{ scheme.Scheme }}</h3>
+        <p><strong>Ministry:</strong> {{ scheme.Ministry }}</p>
+        <p><strong>Sector:</strong> {{ scheme["Key Sector Covered"] }}</p>
+        <p>{{ scheme.Brief }}</p>
+        <p><strong>Benefits:</strong> {{ scheme.Benefits }}</p>
+        <a href="{{ scheme["Link to Application"] }}" target="_blank">Apply Now</a>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<p>No matching schemes found. Try a different idea or sector.</p>
+{% endif %}
+
+<a href="{{ url_for('home') }}">← Back to Home</a>
+{% endblock %}
+
+{% block styles %}
+<style>
+.scheme-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+.scheme-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+.scheme-card h3 {
+    margin-top: 0;
+}
+.scheme-card a {
+    color: #007BFF;
+    text-decoration: none;
+}
+</style>
+{% endblock %}

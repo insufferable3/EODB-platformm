@@ -1,0 +1,757 @@
+[
+    {
+      "Scheme": "STP and EHTP Schemes",
+      "Ministry": "Ministry of Electronics and Information Technology (MeitY)",
+      "Key Sector Covered": "Hardware",
+      "Brief": "Initiatives aimed at promoting software and electronics hardware development for exports in India.",
+      "Eligibility Criteria": "",
+      "Benefits": "Duty-free import of capital goods and raw materials, simplified customs procedures, and tax incentives.",
+      "Link to Application": "https://taxindiaonline.com/RC2/pdfdocs/cm/cm22d.pdf"
+    },
+    {
+      "Scheme": "Centres of Excellence (CoEs)",
+      "Ministry": "Ministry of Electronics and Information Technology (MeitY)",
+      "Key Sector Covered": "Deep Tech/Technology",
+      "Brief": "Promotes national tech innovation hubs via 26 domain-specific Centres of Excellence.",
+      "Eligibility Criteria": "",
+      "Benefits": "Infrastructure, resources, mentoring, and funding support for startups in various sectors.",
+      "Link to Application": "https://www.meity.gov.in/content/centres-excellence-coe-projects"
+    },
+    {
+      "Scheme": "Digital India-GENESIS",
+      "Ministry": "Ministry of Electronics and Information Technology (MeitY)",
+      "Key Sector Covered": "Deep Tech/Technology",
+      "Brief": "Supports startups in Tier-II and Tier-III cities through equity-linked funding and ecosystem development.",
+      "Eligibility Criteria": "Organizations from Tier II & III cities: incubators, accelerators, academic R&D institutions.",
+      "Benefits": "Equity-linked seed investment from ₹490 Cr fund over 5 years.",
+      "Link to Application": "https://msh.meity.gov.in/assets/About%20GENESIS_Scheme.pdf"
+    },
+    {
+      "Scheme": "Duty-Free Import for Export Production",
+      "Ministry": "Ministry of Electronics and Information Technology (MeitY)",
+      "Key Sector Covered": "Import",
+      "Brief": "Enables duty-free import of inputs for export production.",
+      "Eligibility Criteria": "",
+      "Benefits": "Duty remission and replenishment of inputs for export.",
+      "Link to Application": "https://content.dgft.gov.in/Website/FTP%20Chapter%204%20as%20on%20June%2030%202019.pdf"
+    },
+    {
+      "Scheme": "Software Technology Park Scheme",
+      "Ministry": "Ministry of Electronics and Information Technology (MeitY)",
+      "Key Sector Covered": "IT and Service Sector",
+      "Brief": "Export-oriented scheme for software and IT services, with integrated support infrastructure.",
+      "Eligibility Criteria": "Registered under Companies Act; 50% turnover from exports; tech-focused services.",
+      "Benefits": "Duty exemptions, 100% FDI, tax incentives, and simplified procedures.",
+      "Link to Application": "https://stpi.in/en/stp-scheme"
+    },
+    {
+      "Scheme": "Digital Communication Innovation Square (DCIS)",
+      "Ministry": "Ministry of Communications - Department of Telecommunications",
+      "Key Sector Covered": "Communication",
+      "Brief": "Promotes telecom innovation via startup support from proof of concept to commercialization.",
+      "Eligibility Criteria": "DPIIT-recognized startups in digital communication domain.",
+      "Benefits": "Support for R&D, IPR, pilot projects, manufacturing, and global telecom scale-up.",
+      "Link to Application": "https://dcis.dot.gov.in/assets/document/DCIS_Guidelines-2023.pdf"
+    },
+    {
+      "Scheme": "North East Entrepreneurs Development (NEED)",
+      "Ministry": "Ministry of Development of North Eastern Region",
+      "Key Sector Covered": "North East",
+      "Brief": "Supports first-generation entrepreneurs in NE India through grants and loans.",
+      "Eligibility Criteria": "Entrepreneurs with technical qualifications from North Eastern Region.",
+      "Benefits": "Term loan up to 75% of project cost, grants from ₹1L–₹7L.",
+      "Link to Application": "https://my.msme.gov.in/MyMsmeMob/MsmeScheme/Pages/7_1_6.html"
+    },
+    {
+      "Scheme": "North-East Handloom Handicrafts (NEHH)",
+      "Ministry": "Ministry of Development of North Eastern Region - NEHH",
+      "Key Sector Covered": "Technology",
+      "Brief": "Promotes local artisans and craft producers through funding and IP support.",
+      "Eligibility Criteria": "Artisans, weavers, and producers in the North Eastern Region.",
+      "Benefits": "Support for R&D, market entry, technology access, and IP protection.",
+      "Link to Application": "http://funding.venturecenter.co.in/viewrecord.php?srn=BI20200724084616"
+    },
+    {
+      "Scheme": "Working Capital Term Loan (WCTL) – NEDFi",
+      "Ministry": "Ministry of Development of North Eastern Region",
+      "Key Sector Covered": "Credit",
+      "Brief": "Provides working capital term loans to contractors for contract execution.",
+      "Eligibility Criteria": "Eligible contractor firms and companies.",
+      "Benefits": "Gap funding based on creditworthiness and business need.",
+      "Link to Application": "https://www.federalbank.co.in/corporate-finance/working-capital-term-loan"
+    },
+    {
+      "Scheme": "Gap Funding for Contract Execution – NEDFi",
+      "Ministry": "Ministry of Development of North Eastern Region",
+      "Key Sector Covered": "Credit",
+      "Brief": "Offers financial gap funding support for contract-based project work.",
+      "Eligibility Criteria": "Eligible contractor firms and companies.",
+      "Benefits": "Term loan with interest based on risk perception and credit rating.",
+      "Link to Application": "https://my.msme.gov.in/MyMsmeMob/MsmeScheme/Pages/7_1_10.html"
+    },
+
+    {
+          "Scheme": "Financial Assistance for Machinery/Equipment Acquisition",
+          "Ministry": "Ministry of Development of North Eastern Region",
+          "Key Sector Covered": "",
+          "Brief": "Provides financial assistance for acquiring specific machinery/equipment by companies in NE states.",
+          "Eligibility Criteria": "Corporates with 3 years of profitability (NEDFi assisted) or 5 years of operations otherwise.",
+          "Benefits": "Minimum ₹25 lakh to Maximum ₹10 Crores financial assistance.",
+          "Link to Application": "https://my.msme.gov.in/MyMsmeMob/MsmeScheme/NorthEasternDevlop.htm"
+        },
+    {
+          "Scheme": "Women Entrepreneurship Support Scheme",
+          "Ministry": "Ministry of Development of North Eastern Region",
+          "Key Sector Covered": "",
+          "Brief": "Provides financial assistance to women entrepreneurs for new ventures or business expansion.",
+          "Eligibility Criteria": "Skilled women aged 18–50 engaged in viable income-generating activities.",
+          "Benefits": "Financial assistance up to ₹100 lakhs.",
+          "Link to Application": "https://my.msme.gov.in/MyMsmeMob/MsmeScheme/Pages/7_1_11.html"
+        },
+        {
+          "Scheme": "Micro Financing Scheme via NGOs/VAs",
+          "Ministry": "Ministry of Development of North Eastern Region",
+          "Key Sector Covered": "Sector Agnostic",
+          "Brief": "Funds intermediaries to lend to small entrepreneurs and agriculturists in rural NE India.",
+          "Eligibility Criteria": "Indian citizens with ≥40% disability, aged >18, preferably SHG members, women preferred.",
+          "Benefits": "Loan assistance up to ₹10 lakh.",
+          "Link to Application": "http://nhfdc.nic.in/schemes/micro-financing-scheme"
+        },
+        {
+          "Scheme": "Equity Support Scheme for High-Growth Entrepreneurs",
+          "Ministry": "Ministry of Development of North Eastern Region",
+          "Key Sector Covered": "Sector Agnostic",
+          "Brief": "Equity investment in high-growth potential ventures in the NER.",
+          "Eligibility Criteria": "Entrepreneurs with viable, profitable business plans offering above-average ROI.",
+          "Benefits": "Investment per project from ₹50–300 lakhs for startup capital and core current assets.",
+          "Link to Application": "https://my.msme.gov.in/MyMsmeMob/MsmeScheme/Pages/7_1_4.html"
+        },
+        {
+          "Scheme": "North-East Venture Fund (NEVF)",
+          "Ministry": "Ministry of Development of North Eastern Region",
+          "Key Sector Covered": "",
+          "Brief": "First dedicated VC fund for the NE region, supporting scalable, innovative businesses.",
+          "Eligibility Criteria": "Entrepreneurs with innovative ideas, strong teams, viable business models, growth and exit potential.",
+          "Benefits": "Funding from ₹25 lakhs to ₹10 crore per venture. Total corpus ₹100 crore.",
+          "Link to Application": "https://www.nedfiventure.com/funds/"
+        },
+            {
+              "Scheme": "Women Entrepreneurship Platform (WEP)",
+              "Ministry": "Niti Aayog",
+              "Key Sector Covered": "Women Entrepreneurship",
+              "Brief": "NITI Aayog has launched a Women Entrepreneurship Platform (WEP) to provide an ecosystem for budding & existing women entrepreneurs across the country. SIDBI has partnered with NITI Aayog to assist in this initiative.",
+              "Eligibility Criteria": "Potential women entrepreneurs, in collaboration with partner organizations can apply for the scheme.",
+              "Benefits": "WEP enables key partnerships to bring crucial content, workshops, campaigns and other avenues of learning and growth to its users from trailblazers in the industry.",
+              "Link to Application": "https://wep.gov.in"
+            },
+            {
+              "Scheme": "Cent-Kalyani",
+              "Ministry": "Central Bank of India",
+              "Key Sector Covered": "Women Entrepreneurship",
+              "Brief": "Cent-Kalyani is an initiative by the Central Bank of India aimed at empowering women entrepreneurs and businesses. This initiative is launched to encourage Women Entrepreneurs to start new projects or expand and modernize the existing unit.",
+              "Eligibility Criteria": "New as well as Existing Women entrepreneurs for Micro/Small enterprises engaged in manufacturing and service activities. Professionals & Self-employed women also eligible.",
+              "Benefits": "Term Loan and Working Capital Facility up to Rs. 100 Lakhs with concessional interest rates.",
+              "Link to Application": "https://www.centralbankofindia.co.in/en/Cent_Kalyani"
+            },
+            {
+              "Scheme": "CENT STAND UP INDIA",
+              "Ministry": "Central Bank of India",
+              "Key Sector Covered": "Manufacturing",
+              "Brief": "Supports SC/ST and Women entrepreneurs to set up new Green Field enterprises in manufacturing, trading, or services sector.",
+              "Eligibility Criteria": "SC/ST and/or Woman Entrepreneurs, above 18 years of age. 51% shareholding must be held by SC/ST or Women in non-individual enterprises.",
+              "Benefits": "Loan from Rs. 10 lakhs to 1 crore, margin 25%, interest 7.80% to 12.40%, tenure 84 months.",
+              "Link to Application": "https://www.centralbankofindia.co.in/en/cent-stand-up-india"
+            },
+            {
+              "Scheme": "Women Entrepreneur Cell",
+              "Ministry": "Central Bank of India",
+              "Key Sector Covered": "Agriculture, Retail",
+              "Brief": "The Women Entrepreneur Cell is an initiative dedicated to supporting and promoting women entrepreneurs through financial services and guidance.",
+              "Eligibility Criteria": "Women Entrepreneurs are eligible for this scheme.",
+              "Benefits": "Funding, mentorship, and support for expansion and modernization in MSME, agriculture, and retail.",
+              "Link to Application": "https://www.centralbankofindia.co.in/en/Women_Entrepreneur_Cell"
+            },
+            {
+              "Scheme": "PRISM Scheme",
+              "Ministry": "Ministry of Science & Technology",
+              "Department": "Department of Scientific and Industrial Research",
+              "Key Sector Covered": "Science and Technology",
+              "Brief": "The scheme provides grants, technical guidance, and mentoring to individual innovators by incubating their ideas towards enterprise creation.",
+              "Eligibility Criteria": "Any Indian citizen including student innovators. PRISM II: innovators with proven concept and public-funded R&D agencies.",
+              "Benefits": "Funding up to INR 50 Lakhs based on phase and project scope.",
+              "Link to Application": "https://www.indiascienceandtechnology.gov.in/funding-opportunities/startups/promoting-innovations-individuals-startups-and-msmes-prism"
+            },
+               {
+                  "Scheme": "New Generation Innovation and Entrepreneurship Development Centre (NewGen IEDC)",
+                  "Ministry": "Ministry of Science & Technology",
+                  "Key Sector Covered": "Science and Technology",
+                  "Brief": "NewGen IEDC is a program launched by the NSTEDB, DST, Government of India, and implemented by EDII, Ahmedabad. It aims to inculcate the spirit of innovation and entrepreneurship amongst young S&T students and support start-up creation.",
+                  "Eligibility Criteria": "University/Deemed University or premier Institute/College offering Engineering/Technology/Science courses for at least 5 years with at least two faculty trained in DST-sponsored entrepreneurship programs and 5000 sq. ft. space.",
+                  "Benefits": "Upto Rs. 25 Lakhs and recurring expenditure up to Rs. 10 lakhs for five operational years.",
+                  "Link to Application": "https://www.indiascienceandtechnology.gov.in/funding-opportunities/startups/newgen-innovation-and-entrepreneurship-development-centre-newgen-iedc"
+                },
+                {
+                  "Scheme": "Technology Development Programme (TDP)",
+                  "Ministry": "Ministry of Science & Technology",
+                  "Department": "Department of Science and Technology",
+                  "Key Sector Covered": "Science and Technology",
+                  "Brief": "Supports development and integration of technologies for specific end uses, modernization of traditional tools, and application of R&D to socio-economic problem solving.",
+                  "Eligibility Criteria": "Scientists/engineers/technologists in academic institutions, R&D institutes, labs. Multi-disciplinary proposals and collaboration with DSIR-recognized industry preferred.",
+                  "Benefits": "Supports development of innovative products/technologies with industry collaboration.",
+                  "Link to Application": "https://dst.gov.in/technology-development-program-tdp"
+                },
+                {
+                  "Scheme": "TIDE 2.0",
+                  "Ministry": "Ministry of Science & Technology",
+                  "Department": "Department of Science & Technology (DST), Govt of India",
+                  "Key Sector Covered": "Technology",
+                  "Brief": "TIDE 2.0 promotes tech entrepreneurship via financial and technical support to incubators supporting ICT startups in IoT, AI, Blockchain, Robotics, etc. across 51 incubators over 5 years.",
+                  "Eligibility Criteria": "Higher education and R&D organizations with incubation facilities and industry linkages.",
+                  "Quantum/Size of Fund": "Rs 264 crore over 5 years.",
+                  "Benefits": "Co-working spaces, labs, workshops, funding, mentoring, and networking.",
+                  "Notes": "Empowering 51 incubators and 2000 tech startups. Creating a holistic support ecosystem.",
+                  "Link to Application": "https://www.indiascienceandtechnology.gov.in/funding-opportunities/startups/technology-incubation-and-development-entrepreneurs-tide-20"
+                },
+                {
+                    "Scheme": "National Initiative for Developing and Harnessing Innovations (NIDHI)",
+                    "Ministry": "Ministry of Science & Technology",
+                    "Department": "Department of Science & Technology (DST), Govt of India",
+                    "Key Sector Covered": "Innovation & Entrepreneurship, Technology",
+                    "Brief": "National Initiative for Developing and Harnessing Innovations (NIDHI) is an umbrella program conceived and developed by the Innovation & Entrepreneurship division, Department of Science & Technology, Government of India, for nurturing ideas and innovations (knowledge-based and technology-driven) into successful startups. The program would work in line with the national priorities and goals and its focus would be to build an innovation-driven entrepreneurial ecosystem with an objective of socioeconomic development through wealth and job creation. NIDHI aims to nurture start-ups through scouting, supporting, and scaling innovations.",
+                    "Eligibility Criteria": "All the NIDHI-Startup Funds will be disbursed to eligible startups only through eligible NSTEDB linked incubators across India.",
+                    "Benefits": "Avg. Seed Fund Amount for Startups is Rs. 25 Lakhs which goes Upto 100 Lakhs per startup. Guidance from experienced, innovative and highly successful entrepreneurs on the business concept, strategy or venture, and insight into specific industries or markets. Best practices for starting a business and broadening the professional network. Co-working spaces for developing the idea into a marketable product.",
+                    "Link to Application": "https://www.nstedb.com",
+                    "Tenure": "Active",
+                    "Notes": "The basic idea of seed support is to provide financial assistance to the incubators registered as not-for Profit entities approved or funded by the Department of Science and Technology (DST) or any other central or state government to support potential startups with promising ideas, innovations, and technologies. The key objective of the NIDHI-SEED SUPPORT (SS) PROGRAM is to ensure the timely availability of seed support through incubators to deserving startups within an incubator, thereby enabling them to take their venture to the next level and facilitate their success in the marketplace. The scheme also enables the incubators to widen their pipeline of startups and also share the success of their startups which would also result in ensuring their long-term operational sustainability."
+                  },
+                    {
+                      "Scheme": "National Initiative for Developing and Harnessing Innovations (NIDHI)",
+                      "Ministry": "Ministry of Science & Technology",
+                      "Department": "Department of Science & Technology (DST), Govt of India",
+                      "Key Sector Covered": null,
+                      "Brief": "National Initiative for Developing and Harnessing Innovations (NIDHI) is an umbrella program conceived and developed by the Innovation & Entrepreneurship division, Department of Science & Technology, Government of India, for nurturing ideas and innovations (knowledge-based and technology-driven) into successful startups. The program would work in line with the national priorities and goals and its focus would be to build an innovation-driven entrepreneurial ecosystem with an objective of socioeconomic development through wealth and job creation. NIDHI aims to nurture start-ups through scouting, supporting, and scaling innovations.",
+                      "Eligibility Criteria": "All the NIDHI-Startup Funds will be disbursed to eligible startups only through eligible NSTEDB linked incubators across India.",
+                      "Benefits": "Guidance from experienced, innovative and highly successful entrepreneurs on the business concept, strategy or venture, and insight into specific industries or markets. Best practices for starting a business and broadening the professional network. Co-working spaces for developing the idea into a marketable product.",
+                      "Link to Application": "https://www.nstedb.com"
+                    },
+                    {
+                      "Scheme": "DST-WTC Thematic R&D Water Research Call",
+                      "Ministry": "Ministry of Science & Technology",
+                      "Department": "Department of Science & Technology (DST), Govt of India",
+                      "Key Sector Covered": "Water/Environment",
+                      "Brief": "This call aims to stimulate research proposals that emphasize solution-oriented scientific work. Proposals should establish a connection between the need for research, knowledge gaps, and the demand for deliverables. The call supports research in themes related to water, aligned with SDG #6 and other government missions including Jal Jeevan Mission, PMKSY, etc.",
+                      "Eligibility Criteria": "Researchers in academic/R&D/public institutions in regular positions. Depending on the stream, eligibility varies and may include industry-academic partnerships and consortium-based applications. Projects must demonstrate societal or industrial application and may require financial contribution from industry partners.",
+                      "Benefits": "Support for applied research, lab-scale and pilot-scale technology demonstrations, and convergent solutions addressing water challenges. The call supports thematic R&D on water availability, distribution, quality, and reuse.",
+                      "Link to Application": "https://onlinedst.gov.in/Projectproposalformat.aspx"
+                    },
+                    {
+                      "Scheme": "Venture Capital Fund for Scheduled Tribes (VCFST)",
+                      "Ministry": "Ministry of Tribal Affairs (MoTA)",
+                      "Department": null,
+                      "Key Sector Covered": "Scheduled Tribes",
+                      "Brief": "VCFST is launched to promote entrepreneurship and to support innovative ideas through Technology Business Incubators by providing concessional finance to the companies promoted by Scheduled Tribes entrepreneurs.",
+                      "Eligibility Criteria": "Companies must have at least 51% shareholding by Scheduled Tribes entrepreneurs for either 6 or 12 months depending on funding amount. Technology-oriented projects must be incubated and meet defined technical potential and readiness.",
+                      "Benefits": "Funding assistance from Rs.10 lakh to Rs.5 crore; equity funding up to Rs.30 lakhs over 3 years for tech projects; coupon rate of 4% p.a. (3.75% for women/Divyang ST entrepreneurs); investment tenure up to 10 years.",
+                      "Link to Application": "https://vcfst.in/"
+                    },
+                    {
+                          "Scheme": "E-YUVA Scheme",
+                          "Ministry": "Ministry of Science & Technology",
+                          "Department": "DBT - BIRAC",
+                          "Key Sector Covered": "Biotechnology",
+                          "Brief": "E-YUVA scheme is mandated to promote a culture of applied research and need-oriented (societal or industry) entrepreneurial innovation among young students and researchers. The scheme provides funding support (through fellowship and research grant), technical and business mentoring, exposure to bio incubation model, orientation to entrepreneurial culture, etc. to students at various levels including undergraduates, post-graduates, and post-doctoral.",
+                          "Eligibility Criteria": "Open to students pursuing postgraduate studies (Masters or PhD) in biotechnology or related fields from recognized Indian universities and institutes. Faculty members and researchers from Indian academic institutions can also apply as mentors for student teams. Projects should focus on translational research with potential for societal or industrial applications. Applicants must demonstrate innovation and feasibility of their proposed research.",
+                          "Benefits": "Up to Rs. 50 lakhs per project for two years, mentorship, research infrastructure, networking, and visibility.",
+                          "Link to Application": "https://www.birac.nic.in/desc_new.php?id=262"
+                        },
+                        {
+                          "Scheme": "Small Business Innovation Research Initiative (SBIRI)",
+                          "Ministry": "Ministry of Science & Technology",
+                          "Department": "Department of Biotechnology (DBT)",
+                          "Key Sector Covered": "Biotechnology",
+                          "Brief": "The SBIRI scheme was launched to boost Public-Private-Partnership (PPP) efforts in biotechnology, encouraging risk-taking by small and medium enterprises for product/process innovation, and bringing together industry, academia, and government.",
+                          "Eligibility Criteria": "Companies registered under the Companies Act or LLP Act, with majority Indian ownership; academic collaborators must be from public/private universities or recognized research institutes in India.",
+                          "Benefits": "Grant funding typically between Rs. 25–50 lakh, along with mentorship, technical support, access to infrastructure, and recognition.",
+                          "Link to Application": "https://birac.nic.in/desc_new.php?id=217"
+                        },
+                        {
+                          "Scheme": "National Mission on Interdisciplinary Cyber-Physical Systems (NM-ICPS)",
+                          "Ministry": "Ministry of Science & Technology",
+                          "Department": "Department of Science and Technology",
+                          "Key Sector Covered": "Technology",
+                          "Brief": "The mission aims to transform ideas into market-ready products in emerging technologies by supporting 25 Technology Innovation Hubs (TIH) across India and facilitating technology transfer.",
+                          "Eligibility Criteria": "Researchers with PhDs in relevant fields, students in PhD programs, startups focused on CPS solutions, and industries willing to collaborate and invest in R&D.",
+                          "Benefits": "Funding, infrastructure, scholarships, incubation support, early access to technologies, and R&D cost reduction.",
+                          "Link to Application": "https://dst.gov.in/nm-icps-boosting-new-and-emerging-technologies-power-national-initiatives#:~:text=The%20National%20Mission%20on%20Interdisciplinary,national%20initiatives%20in%20key%20areas"
+                        },
+                         {
+                              "Scheme": "High Risk - High Reward Research",
+                              "Ministry": "Ministry of Science & Technology",
+                              "Department": "Department of Science & Technology",
+                              "Key Sector Covered": "Technology",
+                              "Brief": "The High Risk - High Reward Research aims at supporting proposals that are conceptually novel and risky, and if successful, are expected to cause a paradigm shifting influence on the S&T. The focus is on formulating novel hypotheses or scientific breakthroughs aiding in the emergence of new technologies.",
+                              "Eligibility Criteria": "Applicant should be an Indian citizen residing in India with a regular academic research position in a recognized institution. Proposals can be submitted individually or by a team with a Principal Investigator.",
+                              "Benefits": "Funding for up to 3 years (extendable to 5); no budget cap; covers equipment, consumables, contingency, travel, and overheads.",
+                              "Link to Application": "https://serbonline.in/SERB/HRR"
+                            },
+                            {
+                              "Scheme": "SEED Fund - BIRAC",
+                              "Ministry": "Ministry of Science & Technology",
+                              "Department": "Department of Biotechnology (DBT)",
+                              "Key Sector Covered": "Biotechnology",
+                              "Brief": "The SEED Fund is designed to support startups with meritorious ideas and innovations in biotechnology, bridging the gap between initial funding and commercial/VC funding. It is not an investment scheme, but an early-stage support mechanism.",
+                              "Eligibility Criteria": "Indian citizens or Indian-registered companies (≤5 years old), incubated or with access to incubator facilities. Various ownership and structural conditions apply to prevent conflict of interest or duplication.",
+                              "Benefits": "Grant-in-aid up to ₹50 lakhs for startups and incubators to support early-stage proof-of-concept and market validation.",
+                              "Link to Application": "https://birac.nic.in/seedFund.php"
+                            },
+                            {
+                              "Scheme": "Deendayal Antyodaya Yojana – National Urban Livelihoods Mission (DAY-NULM)",
+                              "Ministry": "Ministry of Housing and Urban Affairs",
+                              "Department": null,
+                              "Key Sector Covered": "Employment",
+                              "Brief": "The scheme aims to reduce poverty and vulnerability of the urban poor households by enabling access to self-employment and skilled wage opportunities, supporting livelihood improvement sustainably through grassroots level institutions.",
+                              "Eligibility Criteria": null,
+                              "Benefits": "Includes ESTP (skill training), SEP (self-employment), SMID (institutional development), SUH (shelter), SUSV (street vendor support), and CBT (capacity building & training).",
+                              "Link to Application": "https://nulm.gov.in/"
+                        },
+                        {
+                            "Scheme": "Venture Capital Fund for Scheduled Tribes (VCFST)",
+                            "Ministry": "Ministry of Tribal Affairs (MoTA)",
+                            "Department": "Ministry of Tribal Affairs, Government of India",
+                            "Key Sector Covered": "Scheduled Tribes",
+                            "Brief": "Launched on February 10, 2024, by Hon’ble Union Minister Shri Arjun Munda in the presence of Hon’ble President Smt. Draupadi Murmur, the VCFST scheme aims to promote entrepreneurship among Scheduled Tribes by providing concessional finance to ST-promoted companies, especially through Technology Business Incubators. It supports projects in manufacturing, services, and technology sectors.",
+                            "Eligibility Criteria": "Companies with at least 51% shareholding and management control by Scheduled Tribes entrepreneurs. For funding up to Rs.50 lakh, companies must have 6 months of ST majority ownership; for above Rs.50 lakh, 12 months. New companies succeeding existing ST-owned entities are also eligible. Technology-oriented projects backed by incubators or sanctioned by GoI departments are eligible for equity support.",
+                            "Benefits": "Funding assistance from Rs.10 lakh to Rs.5 crore; technology-oriented projects eligible for up to Rs.30 lakh over 3 years. Concessional interest rate of 4% per annum (3.75% for women and Divyang ST entrepreneurs). Investment tenure up to 10 years, including a moratorium of up to 36 months.",
+                            "Link to Application": "https://tribal.nic.in"
+                          },
+                          
+                            {
+                              "Scheme": "Deendayal Antyodaya Yojana - National Urban Livelihoods Mission (DAY-NULM)",
+                              "Ministry": "Ministry of Housing and Urban Affairs",
+                              "Department": "",
+                              "Key Sector Covered": "Employment",
+                              "Brief": "The scheme aims to reduce poverty and vulnerability of the urban poor households by enabling them to access gainful self-employment and skilled wage employment opportunities, resulting in an appreciable improvement in their livelihoods on a sustainable basis, through building strong grassroots level institutions of the poor.",
+                              "Eligibility Criteria": "",
+                              "Benefits": "Employment through Skill Training and Placement (ESTP), Self Employment Programme (SEP), Social Mobilization and Institutional Development (SMID), Shelter for Urban Homeless (SUH), Support to Urban Street Vendor (SUSV), Capacity Building and Training Programmes (CBT).",
+                              "Link to Application": "https://nulm.gov.in/"
+                            },
+                            {
+                              "Scheme": "Raw Material Assistance Scheme",
+                              "Ministry": "Ministry of Micro, Small and Medium Enterprises",
+                              "Department": "NSIC",
+                              "Key Sector Covered": "Raw Material",
+                              "Brief": "Raw Material Assistance Scheme aims at helping MSMEs by way of financing the purchase of Raw Materials (Both indigenous & imported). This gives an opportunity to MSMEs to focus better on manufacturing quality products.",
+                              "Eligibility Criteria": "The Entrepreneurs are required to apply for Raw Material Assistance only on the prescribed application forms. Forms are available for download or at Branch Offices.",
+                              "Benefits": "Facilitating procurement of raw material with credit support up to 180 days. SMEs helped to avail economies of purchase like bulk purchase, cash discount, etc.",
+                              "Link to Application": "https://www.nsic.co.in/schemes/Raw-Material-Against-BG"
+                            },
+                            {
+                              "Scheme": "ASPIRE (A Scheme for Promotion of Innovation, Rural Industries and Entrepreneurship)",
+                              "Ministry": "Ministry of Micro, Small and Medium Enterprises",
+                              "Department": "",
+                              "Key Sector Covered": "Innovation, Rural Industries & Entrepreneurship",
+                              "Brief": "ASPIRE was launched to set up a network of technology centers and incubation centers to accelerate entrepreneurship and promote start-ups in the agriculture industry. Objectives include employment generation, skilling, and innovation promotion.",
+                              "Eligibility Criteria": "Any agency/institution of Government of India, State Government, Industry Associations, Academic Institutions. Not-for-profit private institutions with relevant experience are also eligible.",
+                              "Benefits": "",
+                              "Link to Application": "https://aspire.msme.gov.in/ASPIRE/AFHome.aspx"
+                            },
+                            {
+                              "Scheme": "Entrepreneurship and Skill Development Programme (ESDP)",
+                              "Ministry": "Ministry of Micro, Small and Medium Enterprises",
+                              "Department": "",
+                              "Key Sector Covered": "",
+                              "Brief": "The objective is to motivate youth from different sections of society including SC, ST, women, differently-abled, ex-servicemen, and BPL persons to pursue self-employment or entrepreneurship.",
+                              "Eligibility Criteria": "Applicable to all aspiring and existing entrepreneurs.",
+                              "Benefits": "Expands entrepreneurship base through skill development and self-employment motivation.",
+                              "Link to Application": "https://msmedi.dcmsme.gov.in/"
+                            },
+                            {
+                              "Scheme": "Trade Related Entrepreneurship Assistance and Development (TREAD) Scheme for Women",
+                              "Ministry": "Ministry of Micro, Small and Medium Enterprises",
+                              "Department": "",
+                              "Key Sector Covered": "Trade",
+                              "Brief": "",
+                              "Eligibility Criteria": "",
+                              "Benefits": "Economic empowerment of women by providing credit (through NGOs), training, development, and counseling related to trades, products, services, etc.",
+                              "Link to Application": "https://www.msmediagra.gov.in/womentread.htm"
+                            },
+                            {
+                                  "Scheme": "International Trade Exhibition Participation Scheme",
+                                  "Ministry": "Ministry of Commerce and Industry",
+                                  "Department": "Tea Board of India",
+                                  "Key Sector Covered": "Export",
+                                  "Brief": "To provide a platform to the exporters to showcase their products in international events for promotion and facilitate the generation of trade opportunities through interaction between buyers and sellers during the exhibition.",
+                                  "Eligibility Criteria": "All exporters holding valid exporters’ licenses are eligible to participate from the Tea Board’s booth. The company must not be under any investigation/charged/prosecuted/debarred/blacklisted. Must be submitting regular monthly export returns. Exporters must deal in only 100% Indian teas.",
+                                  "Benefits": "Platform to showcase products internationally, build trade relationships, and generate export opportunities.",
+                                  "Link to Application": "http://www.teaboard.gov.in/pdf/Revised_Scheme_for_Participation_in_International_fairs_and_exhibitions_with_Tea_Board_29_11_17_pdf2688.pdf"
+                                },
+                                {
+                                  "Scheme": "Niryat Bandhu Scheme",
+                                  "Ministry": "Ministry of Commerce and Industry",
+                                  "Department": "Directorate General of Foreign Trade (DGFT)",
+                                  "Key Sector Covered": "Export",
+                                  "Brief": "Niryat Bandhu Scheme is an online certificate program for export-import business. It aims to promote international trade knowledge among entrepreneurs, especially young entrants. Implemented with IIFT under Digital India and Skill India goals.",
+                                  "Eligibility Criteria": "Any person can take the course.",
+                                  "Benefits": "Training on import-export, certification upon completion and testing. Support for entrepreneurs in starting or growing their export business.",
+                                  "Link to Application": "https://niryatbandhu.iift.ac.in/exim/"
+                                },
+                                {
+                                  "Scheme": "Accelerating Growth of New India's Innovations (AGNIi)",
+                                  "Ministry": "Ministry of Commerce and Industry",
+                                  "Department": "Department for Promotion of Industry and Internal Trade (DPIIT)",
+                                  "Key Sector Covered": "Technology",
+                                  "Brief": "AGNIi helps connect India's best technologies from startups and labs with enterprise, government, and non-profits. It bridges the gap between technology developers and users.",
+                                  "Eligibility Criteria": "Indian universities, research institutions, or innovative startups with strong R&D infrastructure and proven innovation capability.",
+                                  "Benefits": "Grants ranging from INR 10 lakhs to INR 20 crores depending on the scheme. Access to large-scale funding for tech deployment.",
+                                  "Link to Application": "https://www.investindia.gov.in/"
+                             },
+                             
+                                {
+                                  "Scheme": "Technology Development Fund (TDF) Scheme",
+                                  "Ministry": "Ministry of Defence",
+                                  "Department": "Defence Research and Development Organisation (DRDO)",
+                                  "Key Sector Covered": "Defence",
+                                  "Brief": "The TDF Scheme extends financial support and expertise to upgrade existing products/systems, processes, and applications by reducing production costs, improving functionality and quality by promoting Make in India, and the development of futuristic technologies with defense applications.",
+                                  "Eligibility Criteria": "Private industry registered in India, especially MSMEs and Startups. Must be a public/private limited company, LLP, partnership, OPC, or proprietorship. At least 51% Indian ownership and control by a resident Indian citizen.",
+                                  "Benefits": "Financial support and technical expertise for upgrading and developing defense-related technologies.",
+                                  "Link to Application": "https://tdf.drdo.gov.in"
+                                },
+                                {
+                                  "Scheme": "Innovations for Defence Excellence (iDEX)",
+                                  "Ministry": "Ministry of Defence",
+                                  "Department": "Department of Defence Production",
+                                  "Key Sector Covered": "Defence",
+                                  "Brief": "iDEX aims to achieve self-reliance and foster innovation and technology development in Defence and Aerospace by engaging MSMEs, startups, individual innovators, R&D institutes, and academia.",
+                                  "Eligibility Criteria": "Startups recognized by DIPP, MSMEs under the MSME Act 2006, Indian companies under Companies Act 1956/2013, and individual innovators. Research and academic institutions may apply as individual innovators.",
+                                  "Benefits": "Financial support to nearly 300 startups, MSMEs, individual innovators, and 20 partner incubators via Defence Innovation Organisation (DIO).",
+                                  "Link to Application": "https://pib.gov.in/PressReleasePage.aspx?PRID=1782604"
+                                },
+                                    {
+                                      "Scheme": "SIDBI Venture Capital Limited (SVCL)",
+                                      "Ministry": "Public Sector Enterprise",
+                                      "Department": "SIDBI",
+                                      "Key Sector Covered": "Finance",
+                                      "Brief": "SVCL aims to achieve the best returns by investing in deserving entrepreneurial teams using a combination of capital, strategic mentoring, skills, and a vast network of relationships.",
+                                      "Eligibility Criteria": "Strong management team, sustainable competitive advantage, scalability, and above-average profitability. Preferably unlisted MSMEs with Indian ownership and exit potential for venture capital.",
+                                      "Benefits": "SVCL provides 'smart money' including finance, networking, and mentoring support to entrepreneurs. Helps attract additional VC investment.",
+                                      "Link to Application": "https://sidbiventure.co.in"
+                                    },
+                                    {
+                                      "Scheme": "Samridhi Fund",
+                                      "Ministry": "Public Sector Enterprise",
+                                      "Department": "SIDBI",
+                                      "Key Sector Covered": "Social Enterprises",
+                                      "Brief": "The ₹430 crore Samridhi Fund supports social enterprises that deliver both financial and social returns across eight low-income Indian states.",
+                                      "Eligibility Criteria": "Economically viable enterprises with market access for the poor, operating in or planning to expand in specified states. Focus on ESG issues; excludes illegal or harmful activities.",
+                                      "Benefits": "₹430 crore venture capital fund supporting socially impactful businesses in low-income states.",
+                                      "Link to Application": "https://www.startupindia.gov.in/content/sih/en/government-schemes/samridhi_fund.html"
+                                    },
+                                    {
+                                      "Scheme": "Pradhan Mantri MUDRA Yojana (PMMY)",
+                                      "Ministry": "Public Sector Enterprise",
+                                      "Department": "",
+                                      "Key Sector Covered": "Non-Farm, Non-Corporate",
+                                      "Brief": "PMMY provides loans up to ₹10 lakh to non-farm, non-corporate micro and small enterprises to foster entrepreneurship and economic self-reliance.",
+                                      "Eligibility Criteria": "Indian citizens with a business plan for a non-farm activity such as manufacturing, services, or trading, needing credit up to ₹10 lakh. Subject to lender’s conditions and RBI norms.",
+                                      "Benefits": "Collateral-free loans up to ₹10 lakh through banks, MFIs, and NBFCs.",
+                                      "Link to Application": "https://www.mudra.org.in"
+                                    },
+                                    {
+                                      "Scheme": "Stand Up India Scheme",
+                                      "Ministry": "Public Sector Enterprise",
+                                      "Department": "",
+                                      "Key Sector Covered": "Sector Agnostic",
+                                      "Brief": "Provides bank loans between ₹10 lakh and ₹1 crore to at least one SC/ST and one woman borrower per bank branch for setting up greenfield enterprises in manufacturing, services, or trading.",
+                                      "Eligibility Criteria": "SC/ST and/or women entrepreneurs over 18 years old starting first-time ventures. Non-individual enterprises must have 51% SC/ST or women ownership and not be bank defaulters.",
+                                      "Benefits": "Bank loans between ₹10 lakh and ₹1 crore for greenfield projects.",
+                                      "Link to Application": "https://www.standupmitra.in/Home/SUISchemes"
+                                    },
+                                       {
+                                          "Scheme": "NABVENTURES Fund I",
+                                          "Ministry": "National Bank for Agriculture and Rural Development (NABARD)",
+                                          "Department": "NABVENTURES, Subsidiary of NABARD",
+                                          "Key Sector Covered": "Agtech, Animal Husbandry, Aquaculture, Agri-Biotech, Supply Chain Solutions, Climate Resilient Agriculture, Food Processing, Regional Food Brands, Health and Wellness Foods, Food Logistics, Supply Chain Monitoring Solutions, Biotech in Food, Financial Inclusion, Rural/Agri Focused NBFCs, Rural/Agri Fintechs, Rural Healthcare, Rural Education",
+                                          "Brief": "NABVENTURES is a venture growth equity fund that invests in agriculture, food, rural businesses, and agri/rural financial services at early to mid-stage. The fund focuses on asset-light, innovative, and technology-driven business models addressing major challenges in agriculture, food, and rural development.",
+                                          "Eligibility Criteria": "Startups registered as private limited companies or LLPs in India, operating in agriculture, agtech, agri-biotech, food, agri/rural fintech, and rural sectors. Ventures should be early to mid-stage with innovative, scalable models, minimum Rs. 25 lakh annual turnover for profit-making companies or positive unit economics for pre-revenue ventures. Founders must have strong domain expertise and business skills.",
+                                          "Benefits": "Equity and equity-linked investments from Rs. 5 crores to Rs. 20 crores per round with potential for follow-on funding. Mentorship from industry experts, business development support, networking opportunities, brand credibility through NABARD affiliation, and market access support including regulatory guidance.",
+                                          "Link to Application": "https://www.nabard.org/nabard-subsidiaries.aspx?id=1721&cid=1727"
+                                        },
+                                        {
+                                          "Scheme": "Biotechnology Industry Partnership Programme (BIPP)",
+                                          "Ministry": "Biotechnology Industry Research Assistance Council (BIRAC)",
+                                          "Department": "BIRAC, Department of Biotechnology, Government of India",
+                                          "Key Sector Covered": "Agritech, Healthtech",
+                                          "Brief": "The Biotechnology Industry Partnership Programme (BIPP) is a government-industry partnership offering public support on a cost-sharing basis for high-risk, high-reward research in cutting-edge technologies. The scheme supports IP-driven innovation with significant economic potential and addresses national priorities in agriculture, health, bioenergy, and green manufacturing.",
+                                          "Eligibility Criteria": "Eligible applicants include single companies or consortia of companies/LLPs incorporated in India, with at least 51% Indian ownership. Companies must have adequate in-house facilities or be incubated at recognized centers. Collaborators may include public/private universities, research labs, NGOs, or foundations with proper registration/accreditation (e.g., AICTE, CSIR, DSIR, SIRO certified).",
+                                          "Benefits": "BIPP offers viability gap funding to support high-risk R&D projects, access to academic and research expertise through collaboration, and full IP ownership for companies. This reduces financial risk and enhances innovation capacity for Indian companies.",
+                                          "Link to Application": "https://birac.nic.in/desc_new.php?id=216"
+                                        },
+                                        {
+                                          "Scheme": "SEED Fund",
+                                          "Ministry": "Biotechnology Industry Research Assistance Council (BIRAC)",
+                                          "Department": "Department of Biotechnology (DBT)",
+                                          "Key Sector Covered": "Biotechnology",
+                                          "Brief": "The SEED Fund scheme aims to provide capital assistance to biotech startups with promising innovations and technologies. It acts as a bridge between promoter investment and potential angel or venture capital investment, supporting early-stage ventures until they achieve financial sustainability. This is a support mechanism, not an investment vehicle, designed to strengthen incubators and empower startups.",
+                                          "Eligibility Criteria": "Incubators must be supported through BIRAC’s Bio-NEST Programme, operational for at least 3 years with 5+ biotech/med-tech/life sciences startups, and have experience in IP facilitation and managing funding programs. Startups must be registered under the Companies Act, 2013, have at least 51% Indian citizen ownership (excluding OCI/PIO), and be working on innovative biotech/life sciences projects with strong commercialization potential.",
+                                          "Benefits": "For incubators: funding up to Rs. 200 lakhs to support biotech startups, enhancing their nurturing capability and ecosystem credibility. For startups: early-stage seed support to cover proof-of-concept, prototype development, and market validation, along with access to incubator expertise and mentorship.",
+                                          "Link to Application": "https://birac.nic.in/seedFund.php"
+                                        },
+                                        {
+                                          "Scheme": "Industry Innovation Programme on Medical Electronics (IIPME)",
+                                          "Ministry": "Biotechnology Industry Research Assistance Council (BIRAC)",
+                                          "Department": "Department of Biotechnology (DBT), in collaboration with Ministry of Electronics and Information Technology (MeitY)",
+                                          "Key Sector Covered": "MedTech",
+                                          "Brief": "IIPME is a collaborative program between MeitY and BIRAC that supports Indian-led pilot projects focused on innovations in medical electronics, healthcare IT, and medical devices. It aims to accelerate multidisciplinary research through funding at Seed, Early Transition, and Transition to Scale stages, while providing mentorship, networking opportunities, and infrastructure access.",
+                                          "Eligibility Criteria": "Indian startups less than three years old with 51% Indian ownership are eligible. Indian LLPs and entities with DSIR recognition are eligible under Early Transition and Transition to Scale stages.",
+                                          "Benefits": "Seed Grants: Up to Rs. 50 lakhs for 18 months for bold early-stage ideas. Early Transition: Up to Rs. 100 lakhs (grant & loan mix) over 24 months for validated PoC projects. Transition to Scale: Grant & loan mix for 24–36 months for projects with strong validation; cost shared equally by government and industry. Other benefits include mentorship, networking, access to research infrastructure, and enhanced project credibility.",
+                                          "Link to Application": "https://birac.nic.in"
+                                        },
+                                        {
+                                          "Scheme": "SPARSH (Social Innovation Programme for Products: Affordable and Relevant to Societal Health)",
+                                          "Ministry": "Biotechnology Industry Research Assistance Council (BIRAC)",
+                                          "Department": "Department of Biotechnology (DBT)",
+                                          "Key Sector Covered": "Maternal and Child Health, Ageing and Health, Food and Nutrition, Waste to Value, Agri-Tech, Combating Environmental Pollution",
+                                          "Brief": "SPARSH is BIRAC’s social innovation programme aimed at fostering biotech-driven solutions to pressing societal challenges. It supports high-impact innovations targeting neglected issues through biotechnology, with a focus on affordability, relevance, and scalability.",
+                                          "Eligibility Criteria": "Eligible applicants include Indian startups (less than 3 years old) with at least 51% Indian ownership, LLPs with Indian partner majority, Indian academic scientists, researchers, medical or biomedical engineering graduates willing to incubate, and Indian proprietorship concerns with valid registration under local laws.",
+                                          "Benefits": "SPARSH provides mentorship from experts across domains, networking with stakeholders in healthcare and biotech, support in market access and regulatory navigation, and enhanced brand credibility for selected innovators. Funding amounts vary based on project scope, feasibility, and potential impact, with total programme funding typically between Rs. 100–200 crores annually.",
+                                          "Link to Application": "https://birac.nic.in"
+                                        },
+                                        {
+                                          "Scheme": "Venture Capital Fund for Scheduled Castes (VCF-SC)",
+                                          "Ministry": "Ministry of Social Justice and Empowerment (MoSJE)",
+                                          "Department": "Department of Social Justice and Empowerment",
+                                          "Key Sector Covered": "Scheduled Castes",
+                                          "Brief": "Launched in January 2015 by the Ministry of Social Justice and Empowerment (MoSJE), Government of India, the VCF-SC scheme aims to promote entrepreneurship and provide concessional finance to companies promoted by Scheduled Caste entrepreneurs in manufacturing, services, and allied sectors including start-ups and incubated units.",
+                                          "Eligibility Criteria": "For funding up to Rs. 50 lakh: Company must have at least 51% Scheduled Castes ownership for 6 months, or be a successor of a qualifying entity active for over 6 months with 51% SC ownership. For funding above Rs. 50 lakh: 12 months of SC ownership or a successor entity active for 12+ months with the same ownership. Projects must ensure asset creation and fall under manufacturing, services, or allied sectors.",
+                                          "Benefits": "Financial assistance from Rs. 10 lakhs to Rs. 15 crore. Investments up to Rs. 5 crore cover 75% of project cost; above Rs. 5 crore, up to 50%. Remaining cost funded by promoters, government subsidies, or financial institutions. Concessional interest at 4% p.a. (3.75% for women/Divyang SC entrepreneurs). Investment tenure up to 10 years, including a moratorium of up to 36 months.",
+                                          "Link to Application": "https://www.vcfsc.in/index.html"
+                                        },
+                                        {
+                                          "Scheme": "Venture Capital Fund for Backward Classes (VCF-BC)",
+                                          "Ministry": "Ministry of Social Justice and Empowerment (MoSJE)",
+                                          "Department": "Department of Social Justice and Empowerment",
+                                          "Key Sector Covered": "Backward Classes",
+                                          "Brief": "A first-of-its-kind Venture Capital Fund launched by the Ministry of Social Justice and Empowerment, Government of India to promote entrepreneurship among Backward Classes by offering concessional finance to eligible businesses and startups.",
+                                          "Eligibility Criteria": "Applicable to projects in manufacturing, services, and allied sectors ensuring asset creation. Startups are eligible under scheme guidelines. Preference given to women and disabled BC entrepreneurs. For assistance up to Rs. 50 lakh: Companies with at least 51% BC ownership and management control for the past 6 months or new entities succeeding such firms. For assistance above Rs. 50 lakh: 12 months of qualifying ownership and control or similar succession. Documentary proof of Backward Class status is required.",
+                                          "Benefits": "Funding from Rs. 20 lakhs to Rs. 15 crore. Up to Rs. 5 crore: 75% of project cost funded by the scheme; balance 25% by promoter or govt subsidy. Above Rs. 5 crore: 50% funded by scheme, 25% by promoter/govt subsidy, and 25% by promoter or bank/financial institution. Interest coupon at 6% p.a. (5.75% for women/Divyang BC entrepreneurs). Investment period of up to 10 years including a moratorium of up to 36 months.",
+                                          "Link to Application": "https://www.vcfsc.in/vcfbc/index.html"
+                                        },
+                                        {
+                                          "Scheme": "SAGE Venture Fund for Elderly Care Startups",
+                                          "Ministry": "Ministry of Social Justice and Empowerment (MoSJE)",
+                                          "Department": "Department of Social Justice and Empowerment",
+                                          "Key Sector Covered": "Elderly care sector",
+                                          "Brief": "The SAGE Venture Fund provides equity support of up to Rs. 1 crore (for up to 49% stake) to startups developing innovative products and services for senior citizens in India, with the goal of improving their quality of life and care.",
+                                          "Eligibility Criteria": "Startups awarded in national-level innovation challenges like Smart India Hackathon or those already operating in the elderly care space in India. Must be DPIIT-recognized startups, incorporated in India for less than 10 years, with annual turnover not exceeding Rs. 25 crores in any previous year. Must be incorporated as a Private or Public Company and engaged in technology or IP-driven innovation in elderly care. Not formed by splitting or reconstructing an existing business.",
+                                          "Benefits": "Equity support up to Rs. 1 crore for qualifying startups in the elderly care sector.",
+                                          "Link to Application": "https://www.ifciventure.com/sage-venture-funds/Investment-Process.html"
+                                        },
+                                        {
+                                          "Scheme": "Ambedkar Social Innovation and Incubation Mission (ASIIM)",
+                                          "Ministry": "Ministry of Social Justice and Empowerment (MoSJE)",
+                                          "Department": "Department of Social Justice and Empowerment",
+                                          "Key Sector Covered": "Scheduled Castes",
+                                          "Brief": "ASIIM aims to support young SC entrepreneurs working on innovative and technology-oriented business ideas in educational campuses or Technology Business Incubators (TBIs) by providing focused equity funding to help them establish successful commercial ventures.",
+                                          "Eligibility Criteria": "Youth identified by TBIs, Atal Incubation Centers (AICs), Technology/Industrial Parks, Science and Technology Parks of India (STPI), other government or reputed private incubation centers; students awarded in Smart India Hackathon or Smart India Hardware Hackathon; innovative ideas focusing on socio-economic development in TBIs; startups nominated and supported by corporates through CSR funds.",
+                                          "Quantum/size of overall fund": "1,000 SC youth to be identified over 4 years; equity funding of Rs. 30 lakhs per startup over 3 years; successful ventures may qualify for additional venture funding up to Rs. 15 Crore from Venture Capital Fund for Scheduled Castes.",
+                                          "Benefit Tags": ["Funding"],
+                                          "Benefits": "Equity assistance towards TBI accommodation, hardware, software, fellowship, travel, marketing, IP filing, tool-room expenses, co-workers etc.; no financial contribution required from entrepreneurs during incubation except company formation costs; financial assistance released to companies promoted by SC entrepreneurs; funding up to Rs. 30 lakhs over 3 years; coupon rate 4% p.a. (3.75% for women/Divyang SC entrepreneurs); investment period up to 10 years including moratorium of up to 36 months.",
+                                          "Link to Application": "https://www.vcfsc.in/asiim/index.html"
+                                        },
+                                        {
+                                          "Scheme": "Development of Solar Parks and Ultra-Mega Solar Power Projects",
+                                          "Ministry": "Ministry of New and Renewable Energy Sources Schemes",
+                                          "Key Sector Covered": "Energy",
+                                          "Brief": "The scheme was launched in December 2014 to address challenges in setting up scattered solar power projects such as high costs, transmission losses, and delays due to land acquisition and clearances. It facilitates solar project developers to set up projects quickly by promoting solar parks and ultra-mega solar projects.",
+                                          "Eligibility Criteria": "For detailed eligibility criteria, refer to the official guidelines: https://mnre.gov.in/development-of-solar-parks-and-ultra-mega-solar-power-projects/",
+                                          "Benefit Tags": ["Funding"],
+                                          "Tenure": "Up to 2025-26",
+                                          "Benefits": "Central Financial Assistance (CFA) of up to Rs. 25 lakh per solar park for Detailed Project Report (DPR) preparation. Additionally, CFA up to Rs. 20 lakh per MW or 30% of the project cost (including grid connectivity cost), whichever is lower, is provided on achieving scheme milestones.",
+                                          "Notes": "The scheme was designed to overcome challenges like higher costs and delays in solar power project implementation by promoting solar parks and ultra-mega solar power projects.",
+                                          "Link to Application": "https://mnre.gov.in/development-of-solar-parks-and-ultra-mega-solar-power-projects/"
+                                        },
+                                        {
+                                          "Scheme": "SIDBI Make in India Soft Loan Fund for Micro Small and Medium Enterprises (SMILE)",
+                                          "Ministry": "Ministry of Finance",
+                                          "Department": "SIDBI",
+                                          "Key Sector Covered": "MSME",
+                                          "Brief": "SMILE was initiated by the Government of India to encourage MSMEs to actively participate in the 'Make in India' campaign by providing soft loans with favorable terms to meet debt-equity requirements for establishing and expanding MSMEs.",
+                                          "Eligibility Criteria": {
+                                            "General": "Focus on newly emerged enterprises in manufacturing and service sectors.",
+                                            "Existing Enterprises": "Existing MSMEs undertaking expansion, modernization, and technology upgradation.",
+                                            "SMILE Equipment Finance (SEF)": "MSME entities should have been in existence for at least 3 years with a satisfactory financial position."
+                                          },
+                                          "Quantum/Size of Fund": {
+                                            "Min Loan Amount": "Rs. 10 lakh for equipment finance",
+                                            "Max Loan Amount": "Rs. 25 lakh"
+                                          },
+                                          "Benefit Tags": ["Loan"],
+                                          "Tenure": "Active",
+                                          "Benefits": [
+                                            "Attractive interest rates",
+                                            "Longer loan repayment periods",
+                                            "Speedy dispensation of financial assistance",
+                                            "Efficient funding of partial promoter contribution via soft loans",
+                                            "Speedy dispensation of machinery loan through a contactless platform",
+                                            "Lower promoter contribution for SMILE equipment finance"
+                                          ],
+                                          "Link to Application": "https://www.paisabazaar.com/business-loan/sidbi-smile-scheme/"
+                                        },
+                                        {
+                                          "Scheme": "Swarojgar Credit Card (SCC) Scheme",
+                                          "Ministry": "Ministry of Finance",
+                                          "Key Sector Covered": "Micro-entrepreneurs",
+                                          "Brief": "The Swarojgar Credit Card scheme provides easy access to credit for small entrepreneurs and self-employed individuals in India. It aims to provide timely and adequate working capital or block capital, or both, to small artisans, handloom weavers, service sector workers, fishermen, rickshaw owners, and other micro-entrepreneurs through the banking system in a flexible, hassle-free, and cost-effective manner. The facility may also include a reasonable component for consumption needs.",
+                                          "Eligibility Criteria": "Open to small entrepreneurs, self-employed individuals, and small businesses in India. Specific eligibility requirements may vary based on lending institutions and financial regulations.",
+                                          "Quantum/Size of Fund": "Rs. 25,000 per borrower as composite loan",
+                                          "Benefit Tags": ["Credit Benefit"],
+                                          "Tenure": "Active",
+                                          "Benefits": [
+                                            "Access to credit facilities for entrepreneurial and self-employment ventures",
+                                            "Credit on favorable terms",
+                                            "Simplified documentation",
+                                            "Flexibility in repaying loans"
+                                          ],
+                                          "Notes": "The scheme provides working capital or block capital, or both, to small artisans, handloom weavers, service sector workers, fishermen, self-employed persons, rickshaw owners, and other micro-entrepreneurs through the banking system. The facility may also include a reasonable component for consumption needs.",
+                                          "Link to Application": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=1373"
+                                        },
+                                        {
+                                          "Scheme": "Pradhan Mantri Mudra Yojana (PMMY)",
+                                          "Ministry": "Ministry of Finance",
+                                          "Department": "Department of Financial Services",
+                                          "Key Sector Covered": "Manufacturing, processing, trading or service sector",
+                                          "Brief": "Launched on 8th April 2015, the scheme provides loans under three sub-schemes: 'Shishu' (up to Rs. 50,000), 'Kishore' (Rs. 50,001 to Rs. 5 Lakhs), and 'Tarun' (Rs. 5 Lakhs to Rs. 10 Lakhs). Loans are collateral-free, aimed at encouraging young, educated, or skilled workers to become first-generation entrepreneurs and help existing small businesses expand.",
+                                          "Eligibility Criteria": "Eligible borrowers include Individuals, Proprietary concerns, Partnership Firms, Private Ltd. Companies, Public Companies, and other legal forms. Applicants should not be defaulters with banks or financial institutions and must have a satisfactory credit history. Educational qualifications and skills may be assessed based on the proposed activity.",
+                                          "Quantum/Size of Fund": "Sanctioned amount in 2023: Rs. 3,11,811.38 Crores",
+                                          "Benefit Tags": ["Cash Benefit Schemes"],
+                                          "Tenure": "Active",
+                                          "Benefits": {
+                                            "Shishu": "Loans up to Rs. 50,000",
+                                            "Kishore": "Loans from Rs. 50,001 to Rs. 5,00,000",
+                                            "Tarun": "Loans from Rs. 5,00,001 to Rs. 10,00,000"
+                                          },
+                                          "Notes": "Loans under this scheme do not require collateral. As of 20.08.2021, Rs. 16,22,203 crores were sanctioned across 30.7 crore accounts, supporting first-generation entrepreneurs and expanding small businesses.",
+                                          "Link to Application": "https://www.mudra.org.in/"
+                                        },{
+                                            "Scheme": "Agriculture Infrastructure Fund (AIF)",
+                                            "Ministry": "Ministry of Agriculture",
+                                            "Department": "Department of Agriculture & Farmers Welfare",
+                                            "Key Sector Covered": "Agriculture",
+                                            "Brief": "The Department of Agriculture & Farmers Welfare, Ministry of Agriculture and Farmers Welfare, Govt. of India has formulated the Central Sector Scheme with an objective to mobilize a medium long-term debt financing facility for investment in viable projects relating to post-harvest management infrastructure and community farming assets through incentives and financial support in order to improve agriculture infrastructure in the country.",
+                                            "Eligibility Criteria": "Post-Harvest Management Projects, Projects on Hub and Spoke Model, Viable Projects for Building Community Farming Assets.",
+                                            "Quantum/size of overall fund": "Rs. 1 lakh Crore, to be released on First-Come-First-Serve basis; up to 25 projects per individual beneficiary in different locations.",
+                                            "Benefit Tags": ["Credit Benefit"],
+                                            "Tenure": "2020-21 to 2029-30 (loan disbursement period: 2020-21 to 2023-24). Interest subvention and credit guarantee for a loan applicable for 7 years from first disbursement.",
+                                            "Benefits": "All loans under this financing facility will have interest subvention of 3% per annum up to a limit of Rs. 2 crore for a maximum period of seven years. Credit guarantee coverage under CGTMSE for loans up to Rs. 2 crore with the fee paid by the Government. FPOs may avail credit guarantee under the FPO promotion scheme. Moratorium for repayment: 6 months to 2 years.",
+                                            "Notes": "With the launch of Agriculture Infrastructure Fund, trained and established agripreneurs can establish or scale operations. Incentives such as interest subvention and credit guarantee reduce risk for lenders and promote innovation via technologies like IoT and AI. The scheme also encourages collaboration between agripreneurs and farmers.",
+                                            "Link to Application": "https://www.manage.gov.in/aif/AIF%20Brochure.pdf"
+                                          },
+                                            {
+                                              "Scheme": "PM FME Scheme (PM Formalization of Micro Food Processing Enterprises Scheme)",
+                                              "Ministry": "Ministry of Food Processing Industries",
+                                              "Department": null,
+                                              "Key Sector Covered": "Food Processing Sector",
+                                              "Brief": "PM FME Scheme is a government initiative aimed at supporting and formalizing micro food processing enterprises. This scheme provides various benefits and resources to promote entrepreneurship and growth in the food processing sector.",
+                                              "Eligibility Criteria": "Existing Micro Food Processing Unit; Non-corporate entity with <10 workers; ODOP-based units preferred; Applicant must be 18+, Class 8th pass; Only one applicant per family; Must own the enterprise; Proprietary or Partnership firms eligible; Must contribute 10% of cost; Rent/lease cost may be included (max 3 years); Land cost excluded.",
+                                              "Benefits": "Credit-linked capital subsidy @35% (max ₹10 lakh); ₹40,000 seed capital per SHG member; 35% grant for FPOs, SHGs, cooperatives; Marketing and branding support; Capacity building, handholding, and infrastructure support.",
+                                              "Link to Application": "https://pmfme.mofpi.gov.in/pmfme/newsletters/"
+                                            },
+                                            {
+                                              "Scheme": "Creation/Expansion of Food Processing & Preservation Capacities (CEFPPC)",
+                                              "Ministry": "Ministry of Food Processing Industries",
+                                              "Department": null,
+                                              "Key Sector Covered": "Food Processing Sector",
+                                              "Brief": "The scheme focuses on creating and modernizing food processing units to improve value addition and reduce wastage. It includes support for a wide range of post-harvest and preservation processes across sectors such as fruits, vegetables, meat, dairy, and more.",
+                                              "Eligibility Criteria": "Eligible sectors include: Fruits & vegetable processing, Milk, Meat/poultry/fish, Ready-to-eat foods, Bakery, Rice, Pulses, Oilseeds, Mushroom, Spices, Cocoa, Nutritional health foods, Jaggery, Food additives, Animal feed (in approved clusters).",
+                                              "Benefits": "Grant-in-aid up to ₹5 crore: 35% in General Areas; 50% in NE States, hilly/tribal/ITDP areas; 50% for SC/ST entrepreneurs.",
+                                              "Link to Application": "https://blog.forumias.com/creation-expansion-of-food-processing-preservation-capacities-cefppc-scheme/#:~:text=It%20is%20a%20sub-scheme%20of%20Pradhan%20Mantri%20Kisan,level%20of%20processing%2C%20value%20addition%20and%20reduce%20wastage."
+                                            },
+                                            {
+                                              "Scheme": "Agro Processing Cluster Scheme",
+                                              "Ministry": "Ministry of Food Processing Industries",
+                                              "Department": null,
+                                              "Key Sector Covered": "Food Processing Sector",
+                                              "Brief": "Aims to develop modern infrastructure and facilities to enable groups of entrepreneurs to set up food processing units based on a cluster model. It links farmers to markets through organized supply chains and infrastructure.",
+                                              "Eligibility Criteria": "Entities: Govt. Departments, PSUs, JVs, NGOs, Cooperatives, SHGs, FPOs, Pvt. Companies, Partnership/Proprietorship Firms, etc. Refer to official guidelines for full criteria.",
+                                              "Benefits": "Grant-in-aid: 35% in General Areas; 50% in NE States, hilly regions, tribal areas, Islands, and SC/ST entrepreneurs. Max ₹10 crore per project.",
+                                              "Link to Application": "https://www.mofpi.gov.in/Schemes/agro-processing-cluster"
+                                            },
+                                                {
+                                                  "Scheme": "Production Linked Incentive (PLI) Scheme for Automobile and Auto Components",
+                                                  "Ministry": "Ministry of Heavy Industries & Public Enterprises",
+                                                  "Department": null,
+                                                  "Key Sector Covered": "Automobile",
+                                                  "Brief": "The PLI Scheme aims to boost domestic manufacturing of Advanced Automotive Technology products and attract investments across the automotive value chain in India, with a focus on Battery Electric Vehicles (BEVs) and Hydrogen Fuel Cell Vehicles (HFCVs).",
+                                                  "Eligibility Criteria": "Existing automotive manufacturing companies (incorporated in India with minimum global group revenue of ₹10,000 crore and global fixed asset investment of ₹3,000 crore for Champion OEMs; ₹500 crore and ₹150 crore respectively for Component Champions). New non-automotive investors can also apply if incorporated in India, with a global net worth of ₹1,000 crore (as of March 31, 2021). All applicants must not have NPA accounts or be wilful defaulters and commit to minimum new domestic investment and achieving at least 50% domestic value addition.",
+                                                  "Benefits": "Incentives for eligible Advanced Automotive Technology vehicles and components for five consecutive financial years (starting FY 2023-24). Incentive rates are 13-16% of Determined Sales Value for Champion OEMs and 8-11% for Component Champions, with additional incentives for BEV and HFCV components. Supports R&D and offsets cost disabilities in India.",
+                                                  "Link to Application": "https://heavyindustries.gov.in/pli-scheme-automobile-and-auto-component-industry"
+                                                },
+                                                {
+                                                  "Scheme": "PLI Scheme for National Programme on Advanced Chemistry Cell (ACC) Battery Storage",
+                                                  "Ministry": "Ministry of Heavy Industries & Public Enterprises",
+                                                  "Department": null,
+                                                  "Key Sector Covered": "Energy Storage Sector",
+                                                  "Brief": "This PLI scheme supports production of advanced chemistry cell batteries to promote clean and efficient energy storage, reduce import dependency, and drive EV adoption, aiming for a cumulative ACC manufacturing capacity of 50 GWh for ACCs and an additional 5 GWh for Niche ACC Technologies.",
+                                                  "Eligibility Criteria": "Manufacturers participating in domestic ACC battery production and value chain localization. Must commission manufacturing facility within two years, achieve 25% domestic value addition within two years (60% within five years), and incur mandatory investment of ₹225 crore per GWh for committed capacity within two years. Scheme is technology-agnostic but favors higher performance cells.",
+                                                  "Benefits": "Total incentive outlay of ₹18,100 crore over five years. Quarterly subsidies disbursed once manufacturing projects are commissioned and domestic value addition exceeds 25%. Annual cash subsidy capped at 20% of ACC sale price (net of GST). Promotes 'Make in India' and 'Atmanirbhar Bharat', reduces oil import dependency, cuts GHG emissions, and boosts R&D in battery tech.",
+                                                  "Link to Application": "https://heavyindustries.gov.in/pli-scheme-national-programme-advanced-chemistry-cell-acc-battery-storage"
+                                                },{
+                                                    "Scheme": "Central Sector Scheme for Conservation, Development and Sustainable Management of Medicinal Plants",
+                                                    "Ministry": "Ministry of AYUSH",
+                                                    "Department": "National Medicinal Plant Board",
+                                                    "Key Sector Covered": "Healthcare",
+                                                    "Brief": "Promotes cultivation, preservation, and value addition of medicinal plants across India.",
+                                                    "Eligibility Criteria": "Supports SHGs, JFMCs, Van Panchayats, etc. engaged in conservation and promotion of medicinal plants.",
+                                                    "Benefits": "In-situ and ex-situ conservation, herbal gardens, value addition support, training, research, and promotional activities.",
+                                                    "Link to Application": "https://ngo.ayush.gov.in/national-medicinal-plant-board"
+                                                  },
+                                                    {
+                                                      "Scheme": "National Handloom Development Programme (NHDP)",
+                                                      "Ministry": "Ministry of Textiles",
+                                                      "Department": null,
+                                                      "Key Sector Covered": "Handloom",
+                                                      "Brief": "Facilitates holistic development of handloom weavers with financial, design, technology and marketing support.",
+                                                      "Eligibility Criteria": "Varies by component. Includes weavers, SHGs, cooperatives, etc. Specific eligibility depends on the particular sub-component or scheme under NHDP.",
+                                                      "Benefits": "Financial assistance up to ₹2 crore per project for certain components; awareness programs; development of marketing infrastructure; credit subsidies.",
+                                                      "Link to Application": "http://handlooms.nic.in/assets/img/Handloom%20Schemes/final%20book%208%20Nov%2021.pdf"
+                                                    },
+                                                    {
+                                                      "Scheme": "Raw Material Supply Scheme",
+                                                      "Ministry": "Ministry of Textiles",
+                                                      "Department": null,
+                                                      "Key Sector Covered": "Handloom",
+                                                      "Brief": "Ensures quality raw materials for handloom weavers at mill gate/subsidized prices.",
+                                                      "Eligibility Criteria": "Individual weavers, Self-Help Groups (SHGs), Joint Liability Groups (JLGs), handloom weavers' cooperative societies, producer companies, and other handloom entrepreneurs with functional looms.",
+                                                      "Benefits": "Provides transport subsidy and price subsidy for yarn and other raw materials.",
+                                                      "Link to Application": "http://handlooms.nic.in/assets/img/Handloom%20Schemes/final%20book%208%20Nov%2021.pdf"
+                                                    },{
+                                                        "Scheme": "National Handicrafts Development Programme (NHDP)",
+                                                        "Ministry": "Ministry of Textiles",
+                                                        "Department": null,
+                                                        "Key Sector Covered": "Handicrafts",
+                                                        "Brief": "NHDP provides support to handicraft clusters and artisans through inputs, infrastructure, capacity building, and social security coverage. It aims to mainstream artisans while preserving traditional crafts.",
+                                                        "Eligibility Criteria": "Eligibility criteria vary across different components under this scheme. Refer to the NHDP document for details.",
+                                                        "Benefits": "Includes Marketing Support, Skill Development, Ambedkar Hastshilp Vikas Yojana, Direct Benefit to Artisans, Infrastructure and Technology Support, and R&D. Covers financial aid, brand promotion, artisan welfare, and training.",
+                                                        "Link to Application": "https://handicrafts.nic.in/pdf/Scheme.pdf#page=3"
+                                                      }
+                                            
+                                              
+                                          
+                                          
+                                      
+                                  
+                                  
+                              
+                              
+                              
+                          
+                          
+                          
+
+                          
+                        
+                  
+          
+      
+      
+  ]

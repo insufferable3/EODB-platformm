@@ -150,31 +150,7 @@ This registration can help you access various government schemes and subsidies."
     })
 
 
-@app.route('/find_schemes', methods=['GET'])
-def find_schemes():
-    return render_template("scheme_form.html")
 
-
-@app.route('/recommend_schemes', methods=['POST'])
-def recommend_schemes():
-    idea = request.form.get('startup_idea', '').lower()
-    selected_sectors = request.form.getlist('sectors')
-
-    matches = []
-    for scheme in all_schemes:
-        score = 0
-        text_blob = f"{scheme.get('Brief', '')} {scheme.get('Eligibility Criteria', '')} {scheme.get('Key Sector Covered', '')}".lower()
-
-        if idea and any(word in text_blob for word in idea.split()):
-            score += 1
-
-        if selected_sectors and any(sector.lower() in text_blob for sector in selected_sectors):
-            score += 1
-
-        if score > 0:
-            matches.append(scheme)
-
-    return render_template("scheme_results.html", results=matches)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -246,10 +222,7 @@ def logout():
 
     # Debug mode TRUE rakhna development ke liye, production mein FALSE
     # Agar Port 5000 busy ho, toh port=8000 ya koi aur free port use karna
-    app.run(debug=True, host='127.0.0.1', port=5001)
-
-
-
+    app.run(debug=True, host='127.0.0.1', port=5000)
 
 if __name__ == '__main__':
-    app.run(debug=True, host='127.0.0.1', port=5002)
+    app.run(debug=True, host='127.0.0.1', port=5000)

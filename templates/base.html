@@ -6,6 +6,10 @@
     <title>{% block title %}EODB Platform{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    {# THIS IS THE CRUCIAL CHANGE #}
+    {% block styles %}{% endblock %}
+
 </head>
 <body>
     <header>
@@ -18,8 +22,6 @@
                     <li><a href="#">Schemes</a></li>
                     <li><a href="#">Support</a></li>
                     <li><a href="/login">Login/Signup</a></li>
-
-                    
                 </ul>
             </nav>
         </div>

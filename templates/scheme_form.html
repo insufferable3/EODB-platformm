@@ -10,21 +10,22 @@
         <form method="POST" action="{{ url_for('recommend_schemes') }}" class="scheme-form">
             <div class="form-group">
                 <label for="startupIdea">💡 Describe your startup idea:</label>
-                <textarea name="startup_idea" id="startupIdea" class="big-textarea"
-                    placeholder="E.g., An AI-powered platform for sustainable agriculture that uses drone imagery to optimize crop yield and reduce water usage."></textarea>
+                <textarea name="startup_idea" id="startupIdea" class="big-textarea" placeholder="E.g., An AI-powered platform for sustainable agriculture that uses drone imagery to optimize crop yield and reduce water usage."></textarea>
             </div>
 
             <div class="form-group">
                 <label>🏷 Select one or more relevant sectors:</label>
                 <div class="sector-grid">
                     {% for sector in [
-                        'Technology\IAA', 'Women Entrepreneurship', 'Agriculture',
+                        'Technology', 'Women Entrepreneurship', 'Agriculture',
                         'Finance', 'Biotechnology', 'Export',
                         'Food Processing', 'Scheduled Castes', 'Youth'
                     ] %}
                     <label class="sector-card">
                         <input type="checkbox" name="sectors" value="{{ sector }}">
-                        <span>{{ sector }}</span>
+                        <div class="card-content-wrapper"> {# ADDED: Wrapper div for content #}
+                            <span>{{ sector }}</span>
+                        </div> {# ADDED: Closing div tag #}
                     </label>
                     {% endfor %}
                 </div>
@@ -38,63 +39,73 @@
 </div>
 {% endblock %}
 
+{# NO CHANGES TO STYLES BLOCK HERE - it should be the long CSS provided previously #}
+{# (Just keeping this comment here as a reminder, not part of the code) #}
+
+
 {% block styles %}
 <style>
     .page-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 60px 20px;
-        background-color: #f7f9fb;
+        padding: 40px 20px;
         min-height: 100vh;
         box-sizing: border-box;
+        background-color: #f0f2f5;
     }
 
     .page-title {
-        font-size: 2.5em;
-        font-weight: 600;
-        margin-bottom: 40px;
-        color: #222;
         text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+        font-size: 2.2em;
+        font-weight: 600;
+        letter-spacing: -0.5px;
     }
 
     .form-card {
         background-color: #ffffff;
         border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        padding: 50px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        max-width: 900px;
         width: 100%;
-        max-width: 960px;
+        display: flex;
+        flex-direction: column;
     }
 
     .scheme-form {
+        width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 30px;
     }
 
     .form-group {
-        width: 100%;
-    }
+    width: 100%;
+    
+}
 
     .form-group label {
-        font-weight: 600;
-        font-size: 1.2em;
-        margin-bottom: 12px;
         display: block;
-        color: #333;
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: #4a4a4a;
+        font-size: 1.15em;
     }
 
     .big-textarea {
         width: 100%;
-        min-height: 150px;
-        font-size: 1.05rem;
+        min-height: 160px;
         padding: 18px;
-        border: 1px solid #ccc;
-        border-radius: 12px;
+        font-size: 1.05rem;
+        line-height: 1.6;
+        border-radius: 10px;
+        border: 1px solid #dcdcdc;
         resize: vertical;
-        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.03);
-        transition: border-color 0.3s, box-shadow 0.3s;
+        box-shadow: inset 0 2px 5px rgba(0,0,0,0.03);
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     .big-textarea:focus {
@@ -106,75 +117,107 @@
     .sector-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 20px;
+        gap: 15px;
+        width: 100%;
+        margin-top: 5px;
     }
 
+    /* --- NEW / MODIFIED SECTOR CARD STYLES --- */
+
     .sector-card {
-        position: relative;
-        padding: 16px;
-        border-radius: 12px;
-        background-color: #fff;
-        border: 2px solid #ddd;
-        text-align: center;
-        font-weight: 500;
+        display: flex; /* Make the label a flex container */
+        align-items: center; /* Vertically center its direct children */
+        justify-content: center; /* Horizontally center its direct children */
+        padding: 0; /* Remove padding from the label, move it to the wrapper */
+        background-color: #ffffff; /* Default background for the label itself */
+        border: 1px solid #cccccc; /* Default border for the label */
+        border-radius: 10px;
         cursor: pointer;
-        transition: all 0.3s ease;
         user-select: none;
+        height: 60px; /* Fixed height for the card */
+        box-sizing: border-box;
+        text-align: center; /* Fallback for text alignment */
+        position: relative; /* Needed for any positioning of children/pseudo-elements */
+        overflow: hidden; /* Ensures content/background don't spill */
+        transition: all 0.2s ease; /* Smooth transitions for the label's border/shadow */
     }
 
     .sector-card input[type="checkbox"] {
-        display: none;
+        display: none; /* Hide the actual checkbox input */
     }
 
-    .sector-card span {
-        z-index: 1;
-        position: relative;
-        color: #333;
+    /* New styles for the content wrapper div */
+    .card-content-wrapper {
+        display: flex; /* Make this wrapper a flex container */
+        align-items: center; /* Vertically center its child span (the text) */
+        justify-content: center; /* Horizontally center its child span (the text) */
+        width: 100%; /* Make wrapper fill the label's width */
+        height: 100%; /* Make wrapper fill the label's height */
+        padding: 15px 10px; /* APPLY PADDING HERE for the content */
+        box-sizing: border-box; /* Ensures padding is included in width/height */
+        font-weight: 500; /* Default font weight for text */
+        color: #555; /* Default text color */
+        background-color: #ffffff; /* Default wrapper background */
+        border-radius: 9px; /* Slightly less than parent to avoid overlap on border */
+        transition: all 0.2s ease; /* Smooth transitions for wrapper's background/border/color */
+        border: 1px solid transparent; /* Start with transparent border for the wrapper */
+        word-break: break-word; /* Allow long words to break */
+        line-height: 1.2; /* Line height for wrapped text */
     }
 
-    .sector-card input[type="checkbox"]:checked ~ span {
-        color: #28a745;
+    /* Styles for the span inside the wrapper (minimal, as wrapper handles layout) */
+    .card-content-wrapper span {
+        word-break: break-word; /* Keep for text wrapping */
+        line-height: 1.2; /* Keep for text line height */
     }
 
-    .sector-card input[type="checkbox"]:checked ~ span::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background-color: #e6ffe6;
-        border: 2px solid #28a745;
-        border-radius: 12px;
-        z-index: -1;
+    /* --- Styles for when the checkbox is CHECKED --- */
+    .sector-card input[type="checkbox"]:checked + .card-content-wrapper {
+        background-color: #e6ffe6; /* Light green background for the entire wrapper */
+        border-color: #28a745; /* Green border for the entire wrapper */
+        color: #28a745; /* Green text color */
     }
 
-    .sector-card:hover {
-        border-color: #28a745;
-        box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.2);
+    /* --- Hover effect --- */
+    /* Apply hover effect to the .card-content-wrapper itself */
+    .sector-card:hover .card-content-wrapper {
+        border-color: #28a745; /* Green border on hover */
+        box-shadow: 0 0 0 1px #28a745; /* Slight shadow on hover */
     }
 
+    /* Optional: If a checked card is hovered, give it a distinct shadow */
+    .sector-card input[type="checkbox"]:checked + .card-content-wrapper:hover {
+        box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.5); /* A slightly stronger shadow for checked+hover */
+    }
+
+
+    /* --- General Form Actions --- */
     .form-actions {
         display: flex;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .btn {
-        padding: 15px 40px;
-        font-size: 1.2rem;
-        background-color: #007BFF;
-        color: #fff;
+        padding: 15px 35px;
+        font-size: 1.15rem;
         border: none;
+        background-color: #007BFF;
+        color: white;
         border-radius: 10px;
-        font-weight: 600;
         cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.2s ease;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+        font-weight: 600;
         box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
     }
 
     .btn:hover {
         background-color: #0056b3;
         transform: translateY(-2px);
+        box-shadow: 0 7px 20px rgba(0, 123, 255, 0.4);
     }
 
+    /* --- Media Queries --- */
     @media (max-width: 768px) {
         .form-card {
             padding: 30px 20px;
@@ -188,10 +231,49 @@
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         }
 
+        .sector-card {
+            /* padding should remain 0 here, it's on the wrapper now */
+            font-size: 0.9em;
+            height: 50px; /* Adjust height for smaller screens */
+        }
+
+        .card-content-wrapper {
+            padding: 10px 15px; /* Adjust padding for smaller screens */
+        }
+
         .btn {
             padding: 12px 25px;
             font-size: 1rem;
         }
     }
+
+    @media (max-width: 480px) {
+        .page-container {
+            padding: 20px 10px;
+        }
+
+        .form-card {
+            padding: 20px 15px;
+            border-radius: 15px;
+        }
+
+        .page-title {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .sector-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .sector-card {
+            width: 100%;
+            height: auto; /* Allow height to adjust based on content */
+        }
+
+        .card-content-wrapper {
+            padding: 10px 15px; /* Maintain padding */
+        }
+    }
 </style>
-{% endblock %}
+{% endblock %} 

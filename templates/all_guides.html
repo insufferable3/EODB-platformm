@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}All Guides - EODB{% endblock %}
+
+{% block content %}
+<div class="page-container">
+    <h2 class="page-title">📚 Explore Our Step-by-Step Guides</h2>
+    <p class="page-description">Choose a registration type to get detailed guidance:</p>
+
+    <div class="guide-options-grid">
+        {% for guide in guides_list %}
+        <a href="{{ url_for('dynamic_guide_page', guide_slug=guide.slug) }}" class="guide-option-card-link">
+            <div class="guide-option-card">
+                <h3>{{ guide.title }}</h3>
+                <p>{{ guide.description }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+
+    <div class="back-link-container">
+        <a href="{{ url_for('home') }}" class="back-link">← Back to Home</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block styles %}
+{# Styles for this page will be added to static/css/style.css #}
+{% endblock %}

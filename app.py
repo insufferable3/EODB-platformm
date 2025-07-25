@@ -16,12 +16,6 @@ with open("scrape.json", "r", encoding="utf-8") as f:
     all_schemes = json.load(f)
 
 
-
-
-
-
-
-
 # Dummy data for approvals
 approvals_data = {
     "company_registration": {

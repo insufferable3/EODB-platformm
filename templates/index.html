@@ -23,28 +23,33 @@
     <section class="features-section">
         <h3>Key Features</h3>
         <div class="feature-cards">
-            <div class="card">
-                <h4>Step-by-Step Guidance</h4>
-                <p>Clear, actionable steps for every approval process.</p>
-            </div>
+            <a href="{{ url_for('all_guides') }}" class="feature-card-link">
+                <div class="card card-with-button">
+                    <h4>Step-by-Step Guidance</h4>
+                    <p>Clear, actionable steps for every approval process.</p>
+                    <button type="button" class="btn btn-small-card">Explore Guides</button>
+                </div>
+            </a>
             <div class="card">
                 <h4>Real-time Tracking</h4>
                 <p>Monitor your application status effortlessly.</p>
             </div>
-            <div class="card">
+            <div class="card card-with-button"> {# ADDED: card-with-button class #}
                 <h4>Scheme Recommendations</h4>
                 <p>Discover relevant government schemes and subsidies.</p>
-                <a href="{{ url_for('find_schemes') }}">
-                    <button class="btn">Find Schemes</button>
-                </a>
+                <button id="findSchemesBtn" class="btn btn-small-card" onclick="window.location.href='{{ url_for('find_schemes') }}'">Find Schemes</button> {# MOVED BUTTON INSIDE #}
             </div>
-            
         </div>
     </section>
+    
+    {# DELETED: find-schemes-button-container pura section hata do #}
+
+
 {% endblock %}
 
 {% block scripts %}
 <script>
+    // --- Chatbot Logic ---
     document.addEventListener('DOMContentLoaded', function() {
         const launchChatbotBtn = document.getElementById('launchChatbotBtn');
         const chatbotSection = document.querySelector('.chatbot-section');
@@ -52,84 +57,93 @@
         const userInput = document.getElementById('userInput');
         const sendBtn = document.getElementById('sendBtn');
 
-        // Event listener to launch chatbot
-        launchChatbotBtn.addEventListener('click', () => {
-            chatbotSection.style.display = 'block'; // Make chatbot visible
-            launchChatbotBtn.style.display = 'none'; // Hide the launch button
-            userInput.focus(); // Focus on the input field
-        });
+        // Launch chatbot button click event
+        if (launchChatbotBtn) { // Check if button exists
+            launchChatbotBtn.addEventListener('click', () => {
+                chatbotSection.style.display = 'block'; // Make chatbot visible
+                launchChatbotBtn.style.display = 'none'; // Hide the launch button
+                userInput.focus(); // Focus on the input field
+            });
+        }
 
-        // Event listeners for sending messages
-        sendBtn.addEventListener('click', sendMessage);
-        userInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                sendMessage();
-            }
-        });
+        // Event listeners for sending messages in chatbot
+        if (sendBtn) { // Check if button exists
+            sendBtn.addEventListener('click', sendMessage);
+        }
+        if (userInput) { // Check if input exists
+            userInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+        }
 
         function sendMessage() {
             const message = userInput.value.trim(); // Get user input and remove whitespace
             if (message === '') return; // Don't send empty messages
 
-            // Display user's message in the chat window
+            // Display user's message
             const userMessageDiv = document.createElement('div');
             userMessageDiv.classList.add('chat-message', 'user-message');
             userMessageDiv.textContent = message;
             chatWindow.appendChild(userMessageDiv);
 
-            // Scroll chat window to the bottom to show the latest message
+            // Scroll to bottom
             chatWindow.scrollTop = chatWindow.scrollHeight;
 
-            userInput.value = ''; // Clear the input field
+            userInput.value = ''; // Clear input
 
-            // Send message to Flask backend using Fetch API
+            // Send message to Flask backend
             fetch('/ask_chatbot', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json' // Tell Flask we're sending JSON
+                    'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ message: message }) // Convert message to JSON string
+                body: JSON.stringify({ message: message })
             })
-            .then(response => response.json()) // Parse the JSON response from Flask
+            .then(response => response.json())
             .then(data => {
-                // Create a div for bot's message
+                // Display bot response
                 const botMessageDiv = document.createElement('div');
                 botMessageDiv.classList.add('chat-message', 'bot-message');
-
-                // Correctly replace **bold** markdown with <strong> HTML
                 let botResponseHtml = data.response.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-                // Correctly replace newline characters (\n) with HTML <br> tags
                 botMessageDiv.innerHTML = botResponseHtml.replace(/\n/g, '<br>');
 
-                chatWindow.appendChild(botMessageDiv); // Add bot's message to chat window
+                chatWindow.appendChild(botMessageDiv);
 
-                // If recommended approvals are in the response, display them
+                // Display recommended approvals if any
                 if (data.recommended_approvals && data.recommended_approvals.length > 0) {
                     const approvalsListDiv = document.createElement('div');
                     approvalsListDiv.classList.add('chat-message', 'bot-message', 'recommendation');
-                    
-                    // Build HTML for the list of recommendations
                     let ulContent = '<strong>Recommended for you:</strong><ul>';
                     data.recommended_approvals.forEach(app => {
                         ulContent += `<li><a href="${app.portal_link || '#'}" target="_blank">${app.name}</a></li>`;
                     });
                     ulContent += '</ul>';
                     approvalsListDiv.innerHTML = ulContent;
-                    
-                    chatWindow.appendChild(approvalsListDiv); // Add recommendations to chat window
+                    chatWindow.appendChild(approvalsListDiv);
                 }
 
-                // Scroll chat window to the bottom again
+                // Scroll to bottom
                 chatWindow.scrollTop = chatWindow.scrollHeight;
             })
             .catch(error => {
-                // Handle any errors during the fetch request
                 console.error('Error:', error);
                 const errorDiv = document.createElement('div');
                 errorDiv.classList.add('chat-message', 'bot-message', 'error-message');
                 errorDiv.textContent = 'Sorry, something went wrong. Please try again.';
                 chatWindow.appendChild(errorDiv);
                 chatWindow.scrollTop = chatWindow.scrollHeight;
+            });
+        }
+    });
+
+    // --- Find Schemes Button Logic ---
+    document.addEventListener('DOMContentLoaded', function() {
+        const findSchemesBtn = document.getElementById('findSchemesBtn');
+        if (findSchemesBtn) {
+            findSchemesBtn.addEventListener('click', () => {
+                window.location.href = "{{ url_for('find_schemes') }}";
             });
         }
     });

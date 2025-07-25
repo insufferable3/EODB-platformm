@@ -15,6 +15,16 @@ users_collection = db["users"]  # Add this line
 with open("scrape.json", "r", encoding="utf-8") as f:
     all_schemes = json.load(f)
 
+# ... (app.secret_key = "your_secret_key" ke neeche) ...
+with open("scrape.json", "r", encoding="utf-8") as f:
+    all_schemes = json.load(f)
+
+# ADD THIS: Load the new registration steps data
+with open("data/registration_steps.json", "r", encoding="utf-8") as f:
+    all_registration_steps = json.load(f)
+
+# ... (approvals_data dictionary ke neeche) ...
+
 
 # Dummy data for approvals
 approvals_data = {
@@ -142,6 +152,49 @@ This registration can help you access various government schemes and subsidies."
         'recommended_approvals': recommended_approvals,
         'schemes_info': schemes_info
     })
+
+# New Route for listing all guides
+# All Guides Listing Page
+@app.route('/guides')
+def all_guides():
+    guides_list = []
+    for reg_step in all_registration_steps:
+        # Create a URL-friendly slug from the title
+        slug = reg_step['title'].lower().replace(" ", "-").replace(":", "").replace("/", "-")
+        guides_list.append({
+            "title": reg_step['title'],
+            "description": reg_step['forms'][0]['description'] if reg_step['forms'] else "No description available.",
+            "url_name": "dynamic_guide_page", # Point to the new dynamic guide route
+            "slug": slug # Pass the unique slug for the URL
+        })
+    return render_template('all_guides.html', guides_list=guides_list)
+# Note: Baaki routes jaise home, ask_chatbot, find_schemes, recommend_schemes,
+# company_registration_guide (jo abhi banaya tha), login, signup, dashboard, logout
+# sab waise hi rehne dena.
+# Dynamic Guide Page for individual registrations
+@app.route('/guide/<guide_slug>')
+def dynamic_guide_page(guide_slug):
+    # Find the specific guide data using the slug
+    selected_guide_data = None
+    for reg_step in all_registration_steps:
+        slug = reg_step['title'].lower().replace(" ", "-").replace(":", "").replace("/", "-")
+        if slug == guide_slug:
+            selected_guide_data = reg_step
+            break
+
+    if selected_guide_data:
+        return render_template('generic_guide.html', guide_data=selected_guide_data)
+    else:
+        # Handle case where guide_slug is not found
+        flash("Guide not found.")
+        return redirect(url_for('all_guides')) # Redirect back to all guides page
+
+
+
+# Note: Baaki routes (home, ask_chatbot, find_schemes, recommend_schemes, login, signup, dashboard, logout)
+# jaise hain waise hi rehne dena.
+# Aur app.run() bhi waise hi rehne dena.
+
 
 @app.route('/find_schemes', methods=['GET'])
 def find_schemes():

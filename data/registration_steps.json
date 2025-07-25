@@ -1,0 +1,183 @@
+[
+    {
+      "step": 1,
+      "title": "Company Incorporation (SPICe+ and AGILE-PRO)",
+      "category": "Mandatory",
+      "forms": [
+        {
+          "name": "SPICe+ (INC-32)",
+          "description": "Used for company incorporation and application for PAN, TAN, and DIN in one go.",
+          "link": "https://www.mca.gov.in/"
+        },
+        {
+          "name": "AGILE-PRO (INC-35)",
+          "description": "Used to register for GST, EPFO, ESIC, Profession Tax (in some states), and open a bank account during incorporation.",
+          "link": "https://www.mca.gov.in/"
+        },
+        {
+          "name": "Post-Incorporation Filings (MGT-7, AOC-4)",
+          "description": "Annual filings required after company incorporation for financial and compliance reporting.",
+          "link": "https://www.mca.gov.in/"
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "title": "DPIIT Startup Recognition",
+      "category": "Mandatory",
+      "forms": [
+        {
+          "name": "Startup Recognition Form",
+          "description": "Get recognized as a startup by DPIIT to avail tax exemptions, easier IPR access, and government schemes.",
+          "link": "https://www.startupindia.gov.in/"
+        },
+        {
+          "name": "Form 80-IAC",
+          "description": "Used to claim income tax exemption under Section 80-IAC for three years after DPIIT recognition.",
+          "link": "https://www.startupindia.gov.in/"
+        },
+        {
+          "name": "Form 56",
+          "description": "Used to apply for Angel Tax exemption under Section 56(2)(viib).",
+          "link": "https://www.startupindia.gov.in/"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "MSME Registration",
+      "category": "Mandatory",
+      "forms": [
+        {
+          "name": "Udyam Registration",
+          "description": "Register your business as a Micro, Small, or Medium Enterprise (MSME) to access government benefits and funding.",
+          "link": "https://udyamregistration.gov.in/"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "title": "GST Registration",
+      "category": "Mandatory",
+      "forms": [
+        {
+          "name": "GST REG-01",
+          "description": "Required for businesses with turnover above ₹20 lakh or those doing inter-state supply of goods/services.",
+          "link": "https://www.gst.gov.in/"
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "title": "Labor Law Compliance (EPFO / ESIC)",
+      "category": "Mandatory",
+      "forms": [
+        {
+          "name": "Shram Suvidha Portal",
+          "description": "Used to register for LIN (Labor Identification Number) and comply with labor laws.",
+          "link": "https://shramsuvidha.gov.in/"
+        },
+        {
+          "name": "EPFO Registration",
+          "description": "Register your company for Employee Provident Fund obligations.",
+          "link": "https://www.epfindia.gov.in/"
+        },
+        {
+          "name": "ESIC Registration",
+          "description": "Register your company with Employee State Insurance Corporation for employee health benefits.",
+          "link": "https://www.esic.gov.in/"
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "title": "Industry-Specific & Additional Licenses",
+      "category": "Mandatory",
+      "forms": [
+        {
+          "name": "Shop & Establishment License",
+          "description": "Register your physical office/shop with the local municipal authority.",
+          "link": "https://maitri.mahaonline.gov.in/"
+        },
+        {
+          "name": "FSSAI Registration",
+          "description": "License required for any startup involved in the food business.",
+          "link": "https://foscos.fssai.gov.in/"
+        },
+        {
+          "name": "Import Export Code (IEC)",
+          "description": "Required for businesses engaged in import/export operations.",
+          "link": "https://www.dgft.gov.in/"
+        },
+        {
+          "name": "Trademark / Patent Registration",
+          "description": "Register your brand or innovation to protect intellectual property.",
+          "link": "https://ipindia.gov.in/"
+        }
+      ]
+    },
+    {
+      "step": 7,
+      "title": "Optional / Sector-Specific Registrations",
+      "category": "Optional",
+      "forms": [
+        {
+          "name": "Professional Tax Registration",
+          "description": "Required in states like Maharashtra and Karnataka for businesses employing staff.",
+          "link": "https://mahagst.gov.in/"
+        },
+        {
+          "name": "Trade License",
+          "description": "Issued by the local municipal corporation to legally operate a business.",
+          "link": "https://www.mcgm.gov.in/"
+        },
+        {
+          "name": "Digital Signature Certificate (DSC)",
+          "description": "Required for MCA filings, trademark applications, and e-tendering.",
+          "link": "https://www.emudhra.com/"
+        },
+        {
+          "name": "NBFC or PPI License",
+          "description": "Required by fintech companies engaged in lending, wallets, etc. via RBI.",
+          "link": "https://rbi.org.in/"
+        },
+        {
+          "name": "CDSCO Medical Device License",
+          "description": "Compulsory for healthcare startups manufacturing or importing medical devices.",
+          "link": "https://cdsco.gov.in/"
+        },
+        {
+          "name": "RERA Registration",
+          "description": "Mandatory for real estate developers before project launch.",
+          "link": "https://rera.gov.in/"
+        },
+        {
+          "name": "Pollution Control Board Clearance (CTE/CTO)",
+          "description": "Needed for businesses involved in manufacturing, chemicals, and environmental impact.",
+          "link": "https://cpcb.nic.in/"
+        }
+      ]
+    },
+    {
+      "step": 8,
+      "title": "Additional Business Setup Forms",
+      "category": "Optional",
+      "forms": [
+        {
+          "name": "Import Export Declaration",
+          "description": "Declaration form required alongside IEC for international trade operations.",
+          "link": "https://www.dgft.gov.in/"
+        },
+        {
+          "name": "Certificate of Commencement of Business",
+          "description": "Mandatory for companies to start operations post-incorporation (filed via MCA).",
+          "link": "https://www.mca.gov.in/"
+        },
+        {
+          "name": "Professional Tax Enrollment Certificate (PTEC)",
+          "description": "Separate from PTRC, needed by self-employed professionals or directors.",
+          "link": "https://mahagst.gov.in/"
+        }
+      ]
+    }
+  ]

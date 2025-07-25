@@ -8,7 +8,7 @@ body {
 }
 
 /* --- Global Container for Centering Content --- */
-.container {
+.container { /* Used for header, main's inner container, and footer */
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
@@ -56,7 +56,7 @@ header nav ul li a:hover {
     color: #e2e6ea;
 }
 
-/* --- Main Content Area Styling --- */
+/* --- Main Content Area Layout --- */
 main {
     padding: 40px 0;
 }
@@ -207,7 +207,7 @@ main {
     gap: 30px;
 }
 
-.card {
+.card { /* Individual feature card, generic */
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -249,181 +249,177 @@ footer p {
 }
 
 /* --- Common Page Container (For Form & Results Pages - Overrides general body background) --- */
+/* NOTE: Duplicate of page-container below. Keeping only one copy. */
+/* Removed duplicate .page-title, .form-card, .scheme-form, .form-group, etc. */
+
 .page-container {
-    display: flex; /* Flexbox use kiya hai children (title, form-card) ko align karne ke liye */
-    flex-direction: column; /* Children ko vertically stack karo */
-    align-items: center; /* Children ko horizontally center karo (kyunki flex-direction column hai) */
-    padding: 40px 20px; /* Page ke andar padding */
-    min-height: 100vh; /* Page ki height at least viewport ki poori height ho */
-    box-sizing: border-box; /* Padding aur border ko element ki total width/height mein include karo */
-    background-color: #f0f2f5; /* Page ka background color */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; /* Original center alignment */
+    align-items: flex-start; /* Changed to Left align as per request */
+    padding: 40px 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: #f0f2f5; /* Original light background */
 }
 
-/* --- Page Title (e.g., "Discover Relevant Government Schemes") --- */
-.page-title {
-    text-align: center; /* Title ko center mein align karo */
-    color: #333; /* Title ka text color */
-    margin-bottom: 30px; /* Title ke neeche space */
-    font-size: 2.2em; /* Title ka font size */
-    font-weight: 600; /* Font ki motai (boldness) */
-    letter-spacing: -0.5px; /* Letters ke beech ki space */
-}
-
-/* --- Main Form Card (The Big Input Box) Styling --- */
-.form-card {
-    background-color: #ffffff; /* Card ka background color */
-    border-radius: 20px; /* Card ke corners ko gol karo */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Card ko shadow do */
-    padding: 40px; /* Card ke andar content aur border ke beech space */
-    max-width: 900px; /* Card ki maximum चौड़ाई */
-    width: 100%; /* Card ki width poori available width ka 100% ho (max-width tak) */
-    display: flex; /* Flexbox use kiya hai content (form) ko align karne ke liye */
-    flex-direction: column; /* Content ko vertically stack karo */
+/* --- Form Card (The Big Input Box) Styling --- */
+.form-card { /* Moved from duplicate section */
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* --- Scheme Form (Inside the form-card) --- */
-.scheme-form {
-    width: 100%; /* Form ki width poori available width ho */
-    display: flex; /* Flexbox use kiya hai form groups ko align karne ke liye */
-    flex-direction: column; /* Form groups ko vertically stack karo */
-    gap: 30px; /* Form groups ke beech space */
+.scheme-form { /* Moved from duplicate section */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 /* --- General Form Group Styling (Label + Input/Textarea) --- */
-.form-group {
-    width: 100%; /* Puri width lega */
-    display: flex; /* Isko flex container banao */
-    flex-direction: column; /* Iske children ko vertically stack karo */
-    align-items: center; /* Iske children ko horizontally center karo */
+.form-group { /* Moved from duplicate section */
+    width: 100%;
+    display: flex; /* ADDED: Isko flex container banao */
+    flex-direction: column; /* ADDED: Iske children ko vertically stack karo */
+    align-items: center; /* ADDED: Iske children ko horizontally center karo */
 }
 
-.form-group label {
+.form-group label { /* Moved from duplicate section */
     display: block;
     margin-bottom: 10px;
     font-weight: 600;
     color: #4a4a4a;
     font-size: 1.15em;
-    text-align: center; /* ADD THIS: Label text ko center karo */
+    text-align: center; /* ADDED: Label text ko center karo */
 }
 
 /* --- Textarea (Startup Idea) Styling --- */
-.big-textarea {
-    width: 100%; /* Textarea ki width poori available width ho */
-    min-height: 160px; /* Minimum height for textarea */
-    padding: 18px; /* Textarea ke andar padding */
-    font-size: 1.05rem; /* Font size */
-    line-height: 1.6; /* Line height for text */
-    border-radius: 10px; /* Corners ko gol karo */
-    border: 1px solid #dcdcdc; /* Border ka style */
-    resize: vertical; /* User ko sirf vertically resize karne do */
-    box-shadow: inset 0 2px 5px rgba(0,0,0,0.03); /* Andar ki taraf halka shadow */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+.big-textarea { /* Moved from duplicate section */
+    width: 100%;
+    max-width: 700px; /* ADDED: Maximum width set karo (adjust as needed) */
+    margin: 0 auto; /* ADDED: Left/right margin auto to center it */
+    min-height: 160px;
+    padding: 18px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    resize: vertical;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.03);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .big-textarea:focus {
-    border-color: #007BFF; /* Focus hone par border color badlo */
-    outline: none; /* Default outline hatao */
-    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.2); /* Focus hone par blue shadow */
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.2);
 }
 
 /* --- Sector Grid Layout (For Checkboxes) --- */
-.sector-grid {
-    display: grid; /* Grid layout use karo */
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Columns ko auto adjust karo, minimum 150px aur max 1fr */
-    gap: 15px; /* Grid items ke beech space */
-    width: 100%; /* Grid ki width poori available width ho */
-    margin-top: 5px; /* Grid ke upar halka space */
+.sector-grid { /* Moved from duplicate section */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    width: 100%;
+    margin-top: 5px;
 }
 
 /* --- Sector Card Styles (For individual sector checkboxes) --- */
-.sector-card {
-    display: flex; /* Label (jismein checkbox hai) ko flex container banao */
-    align-items: center; /* Iske andar ke children (wrapper div) ko vertically center karo */
-    justify-content: center; /* Iske andar ke children ko horizontally center karo */
-    padding: 0; /* Label ka default padding hatao, padding content wrapper mein apply hoga */
-    background-color: #ffffff; /* Label ka background color */
-    border: 1px solid #cccccc; /* Label ka default border */
-    border-radius: 10px; /* Corners gol karo */
-    cursor: pointer; /* Mouse pointer ko clickable cursor mein badlo */
-    user-select: none; /* Text select na hone do click karne par */
-    height: 60px; /* Card ki fixed height */
-    box-sizing: border-box; /* Padding aur border height/width mein include karo */
-    text-align: center; /* Text ko center align karo */
-    position: relative; /* Position context provide karta hai children ke liye */
-    overflow: hidden; /* Agar content bahar ja raha ho, toh hide karo */
-    transition: all 0.2s ease; /* Sabhi properties mein smooth transition */
+.sector-card { /* Moved from duplicate section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    height: 60px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease;
 }
 
-.sector-card input[type="checkbox"] {
-    display: none; /* Actual checkbox input ko chhupa do */
+.sector-card input[type="checkbox"] { /* Moved from duplicate section */
+    display: none;
 }
 
 /* New styles for the content wrapper div (ye div text ko hold karta hai) */
-.card-content-wrapper {
-    display: flex; /* Is wrapper ko flex container banao */
-    align-items: center; /* Vertically center its child span (the text) */
-    justify-content: center; /* Horizontally center its child span (the text) */
-    width: 100%; /* Make wrapper fill the label's width */
-    height: 100%; /* Make wrapper fill the label's height */
-    padding: 15px 10px; /* APPLY PADDING HERE for the content */
-    box-sizing: border-box; /* Ensures padding is included in width/height */
-    font-weight: 500; /* Default font weight for text */
-    color: #555; /* Default text color */
-    background-color: #ffffff; /* Default wrapper background */
-    border-radius: 9px; /* Slightly less than parent to avoid overlap on border */
-    transition: all 0.2s ease; /* Smooth transitions for wrapper's background/border/color */
-    border: 1px solid transparent; /* Start with transparent border for the wrapper */
-    word-break: break-word; /* Allow long words to break */
-    line-height: 1.2; /* Line height for wrapped text */
+.card-content-wrapper { /* Moved from duplicate section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    font-weight: 500;
+    color: #555;
+    background-color: #ffffff;
+    border-radius: 9px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    word-break: break-word;
+    line-height: 1.2;
 }
 
 /* Styles for the span inside the wrapper (text itself) */
-.card-content-wrapper span {
-    word-break: break-word; /* Keep for text wrapping */
-    line-height: 1.2; /* Keep for text line height */
+.card-content-wrapper span { /* Moved from duplicate section */
+    word-break: break-word;
+    line-height: 1.2;
 }
 
 /* --- Styles for when the checkbox is CHECKED --- */
-.sector-card input[type="checkbox"]:checked + .card-content-wrapper {
-    background-color: #e6ffe6; /* Light green background for the entire wrapper */
-    border-color: #28a745; /* Green border for the entire wrapper */
-    color: #28a745; /* Green text color */
+.sector-card input[type="checkbox"]:checked + .card-content-wrapper { /* Moved from duplicate section */
+    background-color: #e6ffe6;
+    border-color: #28a745;
+    color: #28a745;
 }
 
 /* --- Hover effect --- */
 /* Apply hover effect to the .card-content-wrapper itself (jab mouse uspar aaye) */
-.sector-card:hover .card-content-wrapper {
-    border-color: #28a745; /* Green border on hover */
-    box-shadow: 0 0 0 1px #28a745; /* Halki shadow on hover */
+.sector-card:hover .card-content-wrapper { /* Moved from duplicate section */
+    border-color: #28a745;
+    box-shadow: 0 0 0 1px #28a745;
 }
 
 /* Optional: If a checked card is hovered, give it a distinct shadow */
-.sector-card input[type="checkbox"]:checked + .card-content-wrapper:hover {
-    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.5); /* A slightly stronger shadow for checked + hover */
+.sector-card input[type="checkbox"]:checked + .card-content-wrapper:hover { /* Moved from duplicate section */
+    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.5);
 }
 
 
 /* --- General Form Actions (Button) --- */
-.form-actions {
-    display: flex; /* Flexbox use karo button ko center karne ke liye */
-    justify-content: center; /* Button ko horizontally center karo */
-    margin-top: 30px; /* Button ke upar space */
+.form-actions { /* Moved from duplicate section */
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }
 
-.btn {
-    padding: 15px 35px; /* Button ke andar padding */
-    font-size: 1.15rem; /* Font size */
-    border: none; /* Border hatao */
-    background-color: #007BFF; /* Button ka background color (blue) */
-    color: white; /* Button ka text color */
-    border-radius: 10px; /* Corners gol karo */
-    cursor: pointer; /* Mouse pointer ko clickable cursor mein badlo */
-    transition: background-color 0.2s ease, transform 0.2s ease; /* Smooth transitions */
-    font-weight: 600; /* Font weight */
-    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3); /* Button ko shadow do */
+.btn { /* Moved from duplicate section */
+    padding: 15px 35px;
+    font-size: 1.15rem;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
 }
 
-.btn:hover {
+.btn:hover { /* Moved from duplicate section */
     background-color: #0056b3;
     transform: translateY(-2px);
     box-shadow: 0 7px 20px rgba(0, 123, 255, 0.4);
@@ -431,28 +427,28 @@ footer p {
 
 /* --- Recommended Schemes Layout (Results Page) --- */
 .scheme-grid {
-    display: grid; /* Grid layout use karo */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columns ko auto adjust, min 280px */
-    gap: 20px; /* Grid items ke beech space */
-    margin-top: 20px; /* Upar se margin */
-    width: 100%; /* Poori width lo */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
 }
 
 .scheme-card { /* Individual scheme card for results */
-    background-color: #ffffff; /* Card ka background */
-    border-radius: 10px; /* Corners gol karo */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Shadow do */
-    padding: 25px; /* Andar ki padding */
-    display: flex; /* Flexbox use karo content align karne ke liye */
-    flex-direction: column; /* Content ko vertically stack karo */
-    justify-content: space-between; /* Content ko space out karo */
-    min-height: 200px; /* Minimum height for cards */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
 }
 
 .scheme-card h3 {
-    margin-top: 0; /* Heading ka margin hatao */
-    color: #007BFF; /* Heading color */
-    font-size: 1.3em; /* Font size */
+    margin-top: 0;
+    color: #007BFF;
+    font-size: 1.3em;
     margin-bottom: 10px;
 }
 
@@ -460,25 +456,25 @@ footer p {
     font-size: 0.95em;
     line-height: 1.5;
     color: #555;
-    margin-bottom: 8px; /* Paragraphs ke beech margin */
+    margin-bottom: 8px;
 }
 
 .scheme-card p strong {
-    color: #333; /* Strong text color */
+    color: #333;
 }
 
 .scheme-card a { /* Apply Now link */
-    display: inline-block; /* Link ko inline-block banao */
-    margin-top: 15px; /* Upar se margin */
-    color: #28a745; /* Link ka color green */
-    text-decoration: none; /* Underline hatao */
-    font-weight: 600; /* Bold link */
+    display: inline-block;
+    margin-top: 15px;
+    color: #28a745;
+    text-decoration: none;
+    font-weight: 600;
     transition: color 0.2s ease;
 }
 
 .scheme-card a:hover {
-    color: #0056b3; /* Hover par color change */
-    text-decoration: underline; /* Hover par underline */
+    color: #0056b3;
+    text-decoration: underline;
 }
 
 
@@ -486,53 +482,53 @@ footer p {
 /* Jab screen ki width 768px ya usse kam ho (Tablets ke liye) */
 @media (max-width: 768px) {
     .form-card, .scheme-grid {
-        padding: 30px 20px; /* Padding kam karo */
+        padding: 30px 20px;
     }
 
     .page-title {
-        font-size: 1.8em; /* Title ka font size kam karo */
+        font-size: 1.8em;
     }
 
     .sector-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Columns ko adjust karo */
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 
     .sector-card {
-        font-size: 0.9em; /* Sector card text size kam karo */
-        height: 50px; /* Height kam karo */
+        font-size: 0.9em;
+        height: 50px;
     }
 
     .card-content-wrapper {
-        padding: 10px 15px; /* Padding adjust karo */
+        padding: 10px 15px;
     }
 
     .btn {
-        padding: 12px 25px; /* Button padding kam karo */
-        font-size: 1rem; /* Button font size kam karo */
+        padding: 12px 25px;
+        font-size: 1rem;
     }
 
     .scheme-grid {
-        grid-template-columns: 1fr; /* Tablet par single column */
+        grid-template-columns: 1fr;
     }
 
     .scheme-card {
-        width: 100%; /* Cards poori width lein */
+        width: 100%;
     }
 }
 
 /* Jab screen ki width 480px ya usse kam ho (Mobile Phones ke liye) */
 @media (max-width: 480px) {
     .page-container {
-        padding: 20px 10px; /* Page padding kam karo */
+        padding: 20px 10px;
     }
 
     .form-card {
-        padding: 20px 15px; /* Form card padding kam karo */
-        border-radius: 15px; /* Border radius kam karo */
+        padding: 20px 15px;
+        border-radius: 15px;
     }
 
     .page-title {
-        font-size: 1.5em; /* Title font size aur kam karo */
+        font-size: 1.5em;
         margin-bottom: 20px;
     }
 
@@ -551,5 +547,142 @@ footer p {
 
     .scheme-card {
         min-height: auto;
+    }
+}
+
+
+/* --- Styles for All Guides Listing Page (all_guides.html) --- */
+/* NOTE: Duplicate of page-description below. Keeping only one copy. */
+/* Removed duplicate page-options-grid, etc. */
+
+.page-description {
+    font-size: 1.15em;
+    color: #666;
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.guide-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.guide-option-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Make the whole card clickable */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.guide-option-card-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.guide-option-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.guide-option-card h3 {
+    margin-top: 0;
+    color: #007BFF;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.guide-option-card p {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments for all_guides.html */
+@media (max-width: 768px) {
+    .guide-options-grid {
+        grid-template-columns: 1fr; /* Single column on tablets/mobiles */
+    }
+    .page-description {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+}
+
+
+/* --- Styles for Generic Guide Page (Individual Form Details) --- */
+.guide-forms-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.form-details-card {
+    background-color: #fcfcfc;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.form-details-card h3 {
+    color: #007BFF;
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.form-details-card p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.guide-portal-btn {
+    padding: 10px 20px;
+    font-size: 0.9em;
+    border-radius: 8px;
+    background-color: #28a745; /* Green button */
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.guide-portal-btn:hover {
+    background-color: #218838;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+}
+
+/* Responsive adjustments for generic guide page */
+@media (max-width: 768px) {
+    .guide-forms-list {
+        gap: 15px;
+    }
+    .form-details-card {
+        padding: 20px;
+    }
+    .form-details-card h3 {
+        font-size: 1.3em;
+    }
+    .guide-portal-btn {
+        padding: 8px 15px;
+        font-size: 0.85em;
     }
 }

@@ -8,6 +8,12 @@ app = Flask(__name__)
 app.secret_key = "your_secret_key"
 from pymongo import MongoClient
 
+from flask_pymongo import PyMongo
+import gridfs
+mongo = PyMongo(app)
+fs = gridfs.GridFS(mongo.db)
+
+
 client = MongoClient("mongodb+srv://angelgupta:qPkI1uUzKeZern12@eodbplatform.vllgoss.mongodb.net/")
 
 db = client["eodb_users"]  # your custom DB name
@@ -238,10 +244,52 @@ def recommend_schemes():
 
     return render_template("scheme_results.html", results=matches)
 
-@app.route('/schemes')
-def show_all_schemes():
-    return render_template('all_schemes.html', schemes=all_schemes, page_title="All Government Schemes")
+@app.route('/uploads')
+def uploads():
+    if 'email' not in session:
+        flash("Please log in.")
+        return redirect(url_for('login'))
 
+    files = fs.find({"user": session['email']})
+    return render_template('upload.html', files=files)
+
+@app.route('/view/<file_id>')
+def view_file(file_id):
+    file = fs.get(ObjectId(file_id))
+    return send_file(io.BytesIO(file.read()), download_name=file.filename, mimetype=file.content_type)
+
+
+
+@app.route('/documents', methods=['GET', 'POST'])
+def documents():
+    if 'email' not in session:
+        flash("Please log in.")
+        return redirect(url_for('login'))
+
+    if request.method == 'POST':
+        file = request.files['document']
+        doc_type = request.form.get('doc_type')
+
+        if file:
+            fs.put(file, filename=file.filename, content_type=file.content_type,
+                   user=session['email'], doc_type=doc_type)
+            flash("Document uploaded successfully.")
+            return redirect(url_for('documents'))
+
+    files = fs.find({"user": session['email']})
+    return render_template('documents.html', files=files)
+
+
+@app.route('/download/<file_id>')
+def download_document(file_id):
+    file = fs.get(ObjectId(file_id))
+    return send_file(io.BytesIO(file.read()), download_name=file.filename, as_attachment=True)
+
+@app.route('/delete/<file_id>')
+def delete_document(file_id):
+    fs.delete(ObjectId(file_id))
+    flash("Document deleted.")
+    return redirect(url_for('documents'))
 
 
 
@@ -256,6 +304,7 @@ def login():
         if user:
             if check_password_hash(user['password'], password):
                 session['email'] = user['email']
+                session['username']=user['fname']#store first name in session
                 return redirect('/')
             else:
                 flash("Incorrect password.")
@@ -300,6 +349,7 @@ def signup():
         "age": age
     })
     session['email'] = email
+    session['username']=fname #store first name
     return redirect('/')
 
 @app.route('/dashboard')
@@ -311,7 +361,8 @@ def dashboard():
 
 @app.route('/logout')
 def logout():
-    session.clear()
+    session.pop('username',None)
+    flash('Logged out successfully')
     return redirect(url_for('login'))
 
     # Debug mode TRUE rakhna development ke liye, production mein FALSE

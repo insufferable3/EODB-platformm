@@ -23,7 +23,15 @@
 
 
                     <li><a href="#">Support</a></li>
-                    <li><a href="{{ url_for('login') }}">Login/Signup</a></li>
+                    
+                    {% if 'username' in session %}
+                        <li><a href="#">Welcome, {{ session['username'] }}</a></li>
+                        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('login') }}">Login/Signup</a></li>
+            
+                    {% endif %}
+                    
                 </ul>
             </nav>
         </div>

@@ -4,11 +4,13 @@
 
 {% block content %}
 <div class="page-container">
-    <h2 class="page-title">📚 Explore Our Step-by-Step Guides</h2>
+    <h2 class="page-title"> Explore Our Step-by-Step Guides</h2>
     <p class="page-description">Choose a registration type to get detailed guidance:</p>
 
+    <!-- 🚀 Tier 1 -->
+    <h3 class="section-heading"> Tier 1 (Must-Do First)</h3>
     <div class="guide-options-grid">
-        {% for guide in guides_list %}
+        {% for guide in guides_list if guide.priority == 'Tier 1' %}
         <a href="{{ url_for('dynamic_guide_page', guide_slug=guide.slug) }}" class="guide-option-card-link">
             <div class="guide-option-card">
                 <h3>{{ guide.title }}</h3>
@@ -17,6 +19,35 @@
         </a>
         {% endfor %}
     </div>
+    <!-- 📘 Tier 2 -->
+    <h3 class="section-heading"> Tier 2 (Industry Dependent)</h3>
+
+    <div class="guide-options-grid">
+        {% for guide in guides_list if guide.priority == 'Tier 2' %}
+        <a href="{{ url_for('dynamic_guide_page', guide_slug=guide.slug) }}" class="guide-option-card-link">
+            <div class="guide-option-card">
+                <h3>{{ guide.title }}</h3>
+                <p>{{ guide.description }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+
+    
+
+    <!-- 📒 Tier 3 -->
+<h3 class="section-heading"> Tier 3 (Optional Forms)</h3>
+<div class="guide-options-grid">
+    {% for guide in guides_list if guide.priority == 'Optional' or guide.priority == 'Tier 3' %}
+    <a href="{{ url_for('dynamic_guide_page', guide_slug=guide.slug) }}" class="guide-option-card-link">
+        <div class="guide-option-card">
+            <h3>{{ guide.title }}</h3>
+            <p>{{ guide.description }}</p>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+
 
     <div class="back-link-container">
         <a href="{{ url_for('home') }}" class="back-link">← Back to Home</a>

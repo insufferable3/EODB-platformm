@@ -158,25 +158,42 @@ This registration can help you access various government schemes and subsidies."
 @app.route('/guides')
 def all_guides():
     guides_list = []
-    for reg_step in all_registration_steps:
-        # Create a URL-friendly slug from the title
+
+    # Combine all sections: foundational (Tier 1), business_specific (Tier 2), optional (Tier 3)
+    flat_list = (
+        all_registration_steps.get('foundational', []) +
+        all_registration_steps.get('business_specific', []) +
+        all_registration_steps.get('optional', [])
+    )
+
+    for reg_step in flat_list:
         slug = reg_step['title'].lower().replace(" ", "-").replace(":", "").replace("/", "-")
         guides_list.append({
             "title": reg_step['title'],
             "description": reg_step['forms'][0]['description'] if reg_step['forms'] else "No description available.",
-            "url_name": "dynamic_guide_page", # Point to the new dynamic guide route
-            "slug": slug # Pass the unique slug for the URL
+            "url_name": "dynamic_guide_page",
+            "slug": slug,
+            "priority": reg_step.get('priority', 'Tier 3')  # Add this line to enable filtering
         })
+
     return render_template('all_guides.html', guides_list=guides_list)
+
 # Note: Baaki routes jaise home, ask_chatbot, find_schemes, recommend_schemes,
 # company_registration_guide (jo abhi banaya tha), login, signup, dashboard, logout
 # sab waise hi rehne dena.
 # Dynamic Guide Page for individual registrations
 @app.route('/guide/<guide_slug>')
 def dynamic_guide_page(guide_slug):
-    # Find the specific guide data using the slug
     selected_guide_data = None
-    for reg_step in all_registration_steps:
+
+    # Flatten all steps into one list
+    flat_list = (
+        all_registration_steps.get('foundational', []) +
+        all_registration_steps.get('business_specific', []) +
+        all_registration_steps.get('optional', [])
+    )
+
+    for reg_step in flat_list:
         slug = reg_step['title'].lower().replace(" ", "-").replace(":", "").replace("/", "-")
         if slug == guide_slug:
             selected_guide_data = reg_step
@@ -185,9 +202,8 @@ def dynamic_guide_page(guide_slug):
     if selected_guide_data:
         return render_template('generic_guide.html', guide_data=selected_guide_data)
     else:
-        # Handle case where guide_slug is not found
         flash("Guide not found.")
-        return redirect(url_for('all_guides')) # Redirect back to all guides page
+        return redirect(url_for('all_guides'))
 
 
 

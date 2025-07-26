@@ -5,22 +5,26 @@
 {% block content %}
 <div class="guide-container">
     <h2 class="guide-title">{{ guide_data.title }}</h2>
-    {# Display the main description for the guide. It takes the description from the first form item as a fallback #}
     <p class="guide-description">
         {{ guide_data.description if guide_data.description else (guide_data.forms[0].description if guide_data.forms else "Detailed guide for various registration steps.") }}
     </p>
 
-    <div class="guide-forms-list">
-        {% for form_item in guide_data.forms %}
-        <div class="form-details-card">
-            <h3>{{ form_item.name }}</h3>
-            <p>{{ form_item.description }}</p>
-            {% if form_item.link %}
-                <a href="{{ form_item.link }}" target="_blank" class="btn guide-portal-btn">Visit Official Portal</a>
-            {% endif %}
-        </div>
-        {% endfor %}
-    </div>
+    {% if guide_data.forms %}
+        <h3 class="form-section-heading">📄 Required Steps & Forms</h3>
+        <section class="guide-forms-list">
+            {% for form_item in guide_data.forms %}
+            <article class="form-details-card">
+                <h3>Step {{ loop.index }}: {{ form_item.name }}</h3>
+                <p>{{ form_item.description }}</p>
+                {% if form_item.link %}
+                    <a href="{{ form_item.link }}" target="_blank" class="btn guide-portal-btn">Visit Official Portal</a>
+                {% endif %}
+            </article>
+            {% endfor %}
+        </section>
+    {% else %}
+        <p>No specific forms listed for this guide yet. Please check back later.</p>
+    {% endif %}
 
     <div class="back-link-container">
         <a href="{{ url_for('all_guides') }}" class="back-link">← Back to All Guides</a>
@@ -29,5 +33,5 @@
 {% endblock %}
 
 {% block styles %}
-{# No specific styles added here. All styling will come from static/css/style.css #}
+{# Styling comes from static/css/style.css #}
 {% endblock %}

@@ -1,8 +1,9 @@
-[
+{
+  "foundational": [
     {
       "step": 1,
       "title": "Company Incorporation (SPICe+ and AGILE-PRO)",
-      "category": "Mandatory",
+      "priority": "Tier 1",
       "forms": [
         {
           "name": "SPICe+ (INC-32)",
@@ -18,13 +19,18 @@
           "name": "Post-Incorporation Filings (MGT-7, AOC-4)",
           "description": "Annual filings required after company incorporation for financial and compliance reporting.",
           "link": "https://www.mca.gov.in/"
+        },
+        {
+          "name": "Corporate Identity Number (CIN)",
+          "description": "Unique identification number assigned to companies upon incorporation in India.",
+          "link": "https://www.mca.gov.in/"
         }
       ]
     },
     {
       "step": 2,
       "title": "DPIIT Startup Recognition",
-      "category": "Mandatory",
+      "priority": "Tier 1",
       "forms": [
         {
           "name": "Startup Recognition Form",
@@ -40,13 +46,18 @@
           "name": "Form 56",
           "description": "Used to apply for Angel Tax exemption under Section 56(2)(viib).",
           "link": "https://www.startupindia.gov.in/"
+        },
+        {
+          "name": "Startup India Seed Fund Scheme Application",
+          "description": "Optional form for applying to government seed funding for DPIIT-recognized startups.",
+          "link": "https://seedfund.startupindia.gov.in/"
         }
       ]
     },
     {
       "step": 3,
       "title": "MSME Registration",
-      "category": "Mandatory",
+      "priority": "Tier 1",
       "forms": [
         {
           "name": "Udyam Registration",
@@ -58,7 +69,7 @@
     {
       "step": 4,
       "title": "GST Registration",
-      "category": "Mandatory",
+      "priority": "Tier 1",
       "forms": [
         {
           "name": "GST REG-01",
@@ -70,7 +81,7 @@
     {
       "step": 5,
       "title": "Labor Law Compliance (EPFO / ESIC)",
-      "category": "Mandatory",
+      "priority": "Tier 1",
       "forms": [
         {
           "name": "Shram Suvidha Portal",
@@ -91,24 +102,59 @@
     },
     {
       "step": 6,
-      "title": "Industry-Specific & Additional Licenses",
-      "category": "Mandatory",
+      "title": "Shop & Establishment License",
+      "priority": "Tier 1",
       "forms": [
         {
           "name": "Shop & Establishment License",
           "description": "Register your physical office/shop with the local municipal authority.",
           "link": "https://maitri.mahaonline.gov.in/"
-        },
+        }
+      ]
+    },
+    {
+      "step": 7,
+      "title": "Professional Tax Enrollment Certificate (PTEC)",
+      "priority": "Tier 1",
+      "forms": [
+        {
+          "name": "Professional Tax Enrollment Certificate (PTEC)",
+          "description": "Separate from PTRC, needed by self-employed professionals or directors.",
+          "link": "https://mahagst.gov.in/"
+        }
+      ]
+    }
+  ],
+  "business_specific": [
+    {
+      "step": 8,
+      "title": "FSSAI Registration",
+      "priority": "Tier 2",
+      "forms": [
         {
           "name": "FSSAI Registration",
           "description": "License required for any startup involved in the food business.",
           "link": "https://foscos.fssai.gov.in/"
-        },
+        }
+      ]
+    },
+    {
+      "step": 9,
+      "title": "Import Export Code (IEC)",
+      "priority": "Tier 2",
+      "forms": [
         {
           "name": "Import Export Code (IEC)",
           "description": "Required for businesses engaged in import/export operations.",
           "link": "https://www.dgft.gov.in/"
-        },
+        }
+      ]
+    },
+    {
+      "step": 10,
+      "title": "Trademark / Patent Registration",
+      "priority": "Tier 2",
+      "forms": [
         {
           "name": "Trademark / Patent Registration",
           "description": "Register your brand or innovation to protect intellectual property.",
@@ -117,67 +163,222 @@
       ]
     },
     {
-      "step": 7,
-      "title": "Optional / Sector-Specific Registrations",
-      "category": "Optional",
+      "step": 11,
+      "title": "Drug License",
+      "priority": "Tier 2",
       "forms": [
         {
-          "name": "Professional Tax Registration",
-          "description": "Required in states like Maharashtra and Karnataka for businesses employing staff.",
-          "link": "https://mahagst.gov.in/"
-        },
-        {
-          "name": "Trade License",
-          "description": "Issued by the local municipal corporation to legally operate a business.",
-          "link": "https://www.mcgm.gov.in/"
-        },
-        {
-          "name": "Digital Signature Certificate (DSC)",
-          "description": "Required for MCA filings, trademark applications, and e-tendering.",
-          "link": "https://www.emudhra.com/"
-        },
-        {
-          "name": "NBFC or PPI License",
-          "description": "Required by fintech companies engaged in lending, wallets, etc. via RBI.",
-          "link": "https://rbi.org.in/"
-        },
-        {
-          "name": "CDSCO Medical Device License",
-          "description": "Compulsory for healthcare startups manufacturing or importing medical devices.",
+          "name": "Drug License",
+          "description": "Compulsory for pharmaceutical startups to sell or manufacture drugs.",
           "link": "https://cdsco.gov.in/"
-        },
+        }
+      ]
+    },
+    {
+      "step": 12,
+      "title": "Legal Metrology Registration",
+      "priority": "Tier 2",
+      "forms": [
         {
-          "name": "RERA Registration",
-          "description": "Mandatory for real estate developers before project launch.",
-          "link": "https://rera.gov.in/"
-        },
+          "name": "Legal Metrology Registration",
+          "description": "Required for businesses dealing with packaged goods to ensure accurate weight & measurement labeling.",
+          "link": "https://www.legalmetrology.gov.in/"
+        }
+      ]
+    },
+    {
+      "step": 13,
+      "title": "Fire Department NOC",
+      "priority": "Tier 2",
+      "forms": [
         {
-          "name": "Pollution Control Board Clearance (CTE/CTO)",
-          "description": "Needed for businesses involved in manufacturing, chemicals, and environmental impact.",
+          "name": "Fire Department NOC",
+          "description": "Mandatory for commercial buildings, factories, and public spaces to comply with fire safety norms.",
+          "link": "https://delhi.gov.in/fire-department"
+        }
+      ]
+    },
+    {
+      "step": 14,
+      "title": "OSP License (IT & Telecom)",
+      "priority": "Tier 2",
+      "forms": [
+        {
+          "name": "OSP License",
+          "description": "Mandatory for IT/ITES and BPOs using telecom infrastructure for customer support or data processing.",
+          "link": "https://dot.gov.in/"
+        }
+      ]
+    },
+    {
+      "step": 15,
+      "title": "SEZ or STPI Unit Approval",
+      "priority": "Tier 2",
+      "forms": [
+        {
+          "name": "STPI / SEZ Unit Approval",
+          "description": "Required for IT exports operating under Software Technology Parks or SEZ schemes.",
+          "link": "https://stpi.in/"
+        }
+      ]
+    },
+    {
+      "step": 16,
+      "title": "E-Waste / Plastic Waste Management Registration",
+      "priority": "Tier 2",
+      "forms": [
+        {
+          "name": "E-Waste / Plastic Waste Management Registration",
+          "description": "Mandatory for electronic manufacturers or plastic packaging businesses.",
           "link": "https://cpcb.nic.in/"
         }
       ]
     },
     {
-      "step": 8,
-      "title": "Additional Business Setup Forms",
-      "category": "Optional",
+      "step": 17,
+      "title": "Vehicle Fitness Certificate / RC (Logistics/Transport)",
+      "priority": "Tier 2",
       "forms": [
         {
-          "name": "Import Export Declaration",
-          "description": "Declaration form required alongside IEC for international trade operations.",
-          "link": "https://www.dgft.gov.in/"
-        },
+          "name": "Vehicle Fitness Certificate / RC",
+          "description": "For businesses operating delivery fleets, transport vehicles, etc.",
+          "link": "https://parivahan.gov.in/"
+        }
+      ]
+    },
+    {
+      "step": 18,
+      "title": "Contract Labour Registration (CLRA)",
+      "priority": "Tier 2",
+      "forms": [
         {
-          "name": "Certificate of Commencement of Business",
-          "description": "Mandatory for companies to start operations post-incorporation (filed via MCA).",
-          "link": "https://www.mca.gov.in/"
-        },
-        {
-          "name": "Professional Tax Enrollment Certificate (PTEC)",
-          "description": "Separate from PTRC, needed by self-employed professionals or directors.",
-          "link": "https://mahagst.gov.in/"
+          "name": "Contract Labour Registration (CLRA)",
+          "description": "Mandatory for contractors employing 20+ workers.",
+          "link": "https://labour.gov.in/"
         }
       ]
     }
-  ]
+  ],
+  "optional": [
+  {
+    "step": 19,
+    "title": "Import Export Declaration",
+    "priority": "Tier 3",
+    "forms": [
+      {
+        "name": "Import Export Declaration",
+        "description": "Declaration form required alongside IEC for international trade operations.",
+        "link": "https://www.dgft.gov.in/"
+      }
+    ]
+  },
+  {
+    "step": 20,
+    "title": "Certificate of Commencement of Business",
+    "priority": "Tier 3",
+    "forms": [
+      {
+        "name": "Certificate of Commencement of Business",
+        "description": "Mandatory for companies to start operations post-incorporation (filed via MCA).",
+        "link": "https://www.mca.gov.in/"
+      }
+    ]
+  },
+  {
+    "step": 21,
+    "title": "Startup India Self-Certification (Labour & Environmental Laws)",
+    "priority": "Tier 3",
+    "forms": [
+      {
+        "name": "Startup Self-Certification",
+        "description": "Optional self-compliance form for Startups under 9 labor and 3 environmental laws.",
+        "link": "https://www.startupindia.gov.in/"
+      }
+    ]
+  },
+  {
+    "step": 22,
+    "title": "Digital Signature Certificate (DSC) - Class 3",
+    "priority": "Tier 3",
+    "forms": [
+      {
+        "name": "Digital Signature Certificate (Class 3)",
+        "description": "Useful for secure digital document signing; required for many official filings.",
+        "link": "https://www.cca.gov.in/"
+      }
+    ]
+  },
+  {
+    "step": 23,
+    "title": "ISO Certification",
+    "priority": "Tier 3",
+    "forms": [
+      {
+        "name": "ISO Certification Application",
+        "description": "Optional international standard certification to improve product/service quality.",
+        "link": "https://bis.gov.in/"
+      }
+    ]
+  },
+  {
+    "step": 24,
+    "title": "Startup Loan Scheme Application (MUDRA / Stand-Up India)",
+    "priority": "Tier 3",
+    "forms": [
+      {
+        "name": "Stand-Up India or MUDRA Loan",
+        "description": "Government-backed loan schemes for startups under priority sectors.",
+        "link": "https://www.standupmitra.in/"
+      }
+    ]
+  },
+  {
+    "step": 25,
+    "title": "Startup India Learning Program",
+    "priority": "Tier 3",
+    "forms": [
+      {
+        "name": "Startup India Learning Certificate",
+        "description": "Free online course to help entrepreneurs build, scale, and pitch startups.",
+        "link": "https://www.startupindia.gov.in/"
+      }
+    ]
+  },
+  {
+    "step": 26,
+    "title": "NSIC Registration",
+    "priority": "Tier 3",
+    "forms": [
+      {
+        "name": "NSIC Registration Form",
+        "description": "Optional MSME registration for public procurement and tendering benefits.",
+        "link": "https://www.nsic.co.in/"
+      }
+    ]
+  },
+  {
+    "step": 27,
+    "title": "Pitch Deck Submission to Invest India",
+    "priority": "Tier 3",
+    "forms": [
+      {
+        "name": "Pitch Deck / Business Plan Upload",
+        "description": "Optional form for visibility to government investors and startup support programs.",
+        "link": "https://www.investindia.gov.in/"
+      }
+    ]
+  },
+  {
+    "step": 28,
+    "title": "FDI Proposal Submission (DPIIT FDI Cell)",
+    "priority": "Tier 3",
+    "forms": [
+      {
+        "name": "FDI Proposal Form",
+        "description": "Required only if your business falls under the government approval route for FDI.",
+        "link": "https://dpiit.gov.in/"
+      }
+    ]
+  }
+]
+}

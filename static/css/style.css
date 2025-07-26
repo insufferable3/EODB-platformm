@@ -686,3 +686,19 @@ footer p {
         font-size: 0.85em;
     }
 }
+
+.feature-card-link {
+    text-decoration: none;
+}
+
+/* Section Headings: Tier 1 / Tier 2 / Optional */
+.section-heading {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    text-align: center;
+    color: #333;
+    font-weight: 700;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 8px;
+}

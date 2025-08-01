@@ -4,13 +4,24 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import re
 import json
 
+from flask import Flask
+from flask_pymongo import PyMongo
+
 app = Flask(__name__)
+
+# ✅ Set your MongoDB URI here
+app.config["MONGO_URI"] = "mongodb://localhost:27017/eodbplatform"
+
+mongo = PyMongo(app)
+
+
+
 app.secret_key = "your_secret_key"
 from pymongo import MongoClient
 
-from flask_pymongo import PyMongo
+
 import gridfs
-mongo = PyMongo(app)
+
 fs = gridfs.GridFS(mongo.db)
 
 
@@ -351,6 +362,10 @@ def signup():
     session['email'] = email
     session['username']=fname #store first name
     return redirect('/')
+
+@app.route('/schemes')
+def show_all_schemes():
+    return render_template('all_schemes.html', schemes=all_schemes, page_title="All Government Schemes")
 
 @app.route('/dashboard')
 def dashboard():

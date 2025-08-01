@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}Your Uploaded Documents - EODB Platform{% endblock %}
+
+{% block content %}
+<style>
+    .documents-section {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .documents-section h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 28px;
+        color: #333;
+    }
+
+    .document-item {
+        background: #f8f9fa;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .doc-info {
+        flex: 1 1 60%;
+    }
+
+    .doc-info h4 {
+        margin: 0;
+        font-size: 20px;
+        color: #222;
+    }
+
+    .doc-info p {
+        margin: 5px 0;
+        color: #666;
+        font-size: 14px;
+    }
+
+    .doc-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .green-btn {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+        transition: all 0.3s ease;
+    }
+
+    .green-btn:hover {
+        background-color: #1e7e34;
+        transform: translateY(-2px);
+    }
+
+    .no-docs {
+        text-align: center;
+        color: #777;
+        font-size: 16px;
+        margin-top: 40px;
+    }
+</style>
+
+<div class="documents-section">
+    <h2>Your Uploaded Documents</h2>
+
+    {% if files|length == 0 %}
+        <p class="no-docs">You have not uploaded any documents yet.</p>
+    {% else %}
+        {% for file in files %}
+            <div class="document-item">
+                <div class="doc-info">
+                    <h4>{{ file.filename }}</h4>
+                    <p>Type: {{ file.doc_type if file.doc_type else 'N/A' }}</p>
+                    <p>Uploaded On: {{ file.upload_date.strftime('%d %B %Y, %I:%M %p') }}</p>
+                </div>
+                <div class="doc-actions">
+                    <a href="{{ url_for('download_document', file_id=str(file._id)) }}" class="green-btn">Download</a>
+                    <a href="{{ url_for('view_file', file_id=str(file._id)) }}" class="green-btn" target="_blank">View</a>
+                    <a href="{{ url_for('delete_document', file_id=str(file._id)) }}" class="green-btn">Delete</a>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}

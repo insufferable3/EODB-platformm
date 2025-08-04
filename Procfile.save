@@ -1,0 +1,6 @@
+web: gunicorn app:app
+
+ls -l /Users/saanchritu/Desktop/OKAY/EODB-Platform
+
+ls -l /Users/saanchritu/Desktop/OKAY/EODB-Platform
+
